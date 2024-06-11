@@ -6,9 +6,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )
 
 // DBClientInterfaceName contains the name of the interfaces.DBClient implementation in the DIC.

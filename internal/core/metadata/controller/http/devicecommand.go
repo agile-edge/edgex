@@ -8,17 +8,17 @@ package http
 import (
 	"net/http"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/metadata/application"
-	"github.com/edgexfoundry/edgex-go/internal/io"
-	"github.com/edgexfoundry/edgex-go/internal/pkg"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/correlation"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos"
-	commonDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/common"
-	requestDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/requests"
+	"github.com/agile-edgex/edgex-go/internal/core/metadata/application"
+	"github.com/agile-edgex/edgex-go/internal/io"
+	"github.com/agile-edgex/edgex-go/internal/pkg"
+	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
+	requestDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
 
 	"github.com/labstack/echo/v4"
 )

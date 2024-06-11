@@ -1,7 +1,7 @@
 # Contributing to EdgeX Foundry
 
 The following is a set of guidelines for contributing to EdgeX Foundry and its libraries, which are
-hosted in the [EdgeX Foundry Organization](https://github.com/edgexfoundry) on GitHub.
+hosted in the [EdgeX Foundry Organization](https://github.com/agile-edgex) on GitHub.
 
 This project adheres to the [Contributor Covenant 1.2](http://contributor-covenant.org/version/1/2/0).
 By participating, you are expected to uphold this code.
@@ -12,7 +12,7 @@ Reporting issues is a great way to contribute to the project. We always apprecia
 thorough bug reports.
 
 Prior to raising a new issue, check out [our issue
-list](https://github.com/edgexfoundry/edgex-go/issues) to determine whether it already include the
+list](https://github.com/agile-edgex/edgex-go/issues) to determine whether it already include the
 problem you are facing.
 
 A good bug report shouldn't leave others needing to chase you up for more information. Please try to
@@ -50,7 +50,7 @@ Adhering to the following process is the best way to get your work included in t
    cd edgex-go
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/edgexfoundry/edgex-go.git
+   git remote add upstream https://github.com/agile-edgex/edgex-go.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

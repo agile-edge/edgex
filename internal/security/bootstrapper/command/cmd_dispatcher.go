@@ -20,16 +20,16 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/gate"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/genpassword"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/gethttpstatus"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/listen"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/setupacl"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/waitfor"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/gate"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/genpassword"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/gethttpstatus"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/listen"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/setupacl"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/waitfor"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 // NewCommand instantiates a command implementing interfaces.Command based on the input command argument

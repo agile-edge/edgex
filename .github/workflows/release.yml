@@ -6,6 +6,6 @@ on:
       - '!v*-dev*'
 jobs:
   release:
-    uses: edgexfoundry/edgex-global-pipelines/.github/workflows/release.yml@stable
+    uses: agile-edgex/edgex-global-pipelines/.github/workflows/release.yml@stable
     permissions:
       contents: write

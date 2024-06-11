@@ -19,12 +19,12 @@ package spiffetokenprovider
 import (
 	"context"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/common"
-	securityCommon "github.com/edgexfoundry/edgex-go/internal/security/common"
-	fileProviderConfig "github.com/edgexfoundry/edgex-go/internal/security/fileprovider/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v3/secrets"
+	"github.com/agile-edgex/edgex-go/internal/security/common"
+	securityCommon "github.com/agile-edgex/edgex-go/internal/security/common"
+	fileProviderConfig "github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
+	"github.com/agile-edgex/edgex-go/internal/security/secretstore"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
 )
 
 func makeToken(serviceName string,

@@ -18,7 +18,7 @@ package main
 import (
 	"context"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/command"
+	"github.com/agile-edgex/edgex-go/internal/core/command"
 
 	"github.com/labstack/echo/v4"
 )

@@ -10,15 +10,15 @@ import (
 	"fmt"
 	"strings"
 
-	commandContainer "github.com/edgexfoundry/edgex-go/internal/core/command/container"
+	commandContainer "github.com/agile-edgex/edgex-go/internal/core/command/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos"
-	commonDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/responses"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
+	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 )
 
 // AllCommands query commands by offset, and limit

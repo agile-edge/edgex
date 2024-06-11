@@ -59,7 +59,7 @@ fi
 echo "$(date) CORS settings dump ..."
 ( set | grep EDGEX_SERVICE_CORSCONFIGURATION ) || true
 
-# See https://github.com/edgexfoundry/edgex-go/issues/4648 as to why CORS is implemented this way.
+# See https://github.com/agile-edgex/edgex-go/issues/4648 as to why CORS is implemented this way.
 # Warning: no not simplify add_header redundancy. See https://www.peterbe.com/plog/be-very-careful-with-your-add_header-in-nginx
 corssnippet=/etc/nginx/templates/cors.block.$$
 touch "${corssnippet}"

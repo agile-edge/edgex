@@ -14,14 +14,14 @@ import (
 	"net/http"
 	"strconv"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/responses"
+	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
 
-	"github.com/edgexfoundry/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/command/application"
+	"github.com/agile-edgex/edgex-go/internal/core/command/application"
 )
 
 // retrieveServiceNameByDevice validates the existence of device and device service,

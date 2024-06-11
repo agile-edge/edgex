@@ -6,15 +6,15 @@
 package mocks
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/core/data/config"
-	dataContainer "github.com/edgexfoundry/edgex-go/internal/core/data/container"
-	"github.com/edgexfoundry/go-mod-messaging/v3/messaging/mocks"
+	"github.com/agile-edgex/edgex-go/internal/core/data/config"
+	dataContainer "github.com/agile-edgex/edgex-go/internal/core/data/container"
+	"github.com/agile-edgex/go-mod-messaging/v3/messaging/mocks"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 // NewMockDIC function returns a mock bootstrap di Container

@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/security/config/command"
+	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

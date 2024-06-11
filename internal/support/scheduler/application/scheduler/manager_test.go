@@ -8,10 +8,10 @@ package scheduler
 import (
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/support/scheduler/config"
+	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 
 	"github.com/stretchr/testify/require"
 )

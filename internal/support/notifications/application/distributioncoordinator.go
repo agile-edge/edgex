@@ -6,12 +6,12 @@
 package application
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/models"
+	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 )
 
 // distribute distributes notification to associate subscriptions

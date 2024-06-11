@@ -19,18 +19,18 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/mosquitto/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/mosquitto/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/mosquitto/handlers"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/edgex-go/internal"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/handlers"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/flags"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )
 
 // Configure is the main entry point for configuring the mosquitto broker before startup

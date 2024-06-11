@@ -21,13 +21,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/application"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/application/channel"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/edgex-go/internal/support/notifications/application"
+	"github.com/agile-edgex/edgex-go/internal/support/notifications/application/channel"
+	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
 	"github.com/labstack/echo/v4"
 )

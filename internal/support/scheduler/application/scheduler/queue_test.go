@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/support/scheduler/config"
+	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/models"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
 	"github.com/stretchr/testify/require"
 	"gopkg.in/eapache/queue.v1"

@@ -21,19 +21,19 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
-	bootstrapper "github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/handlers"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/redis"
+	bootstrapper "github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/container"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/handlers"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )
 
 const (

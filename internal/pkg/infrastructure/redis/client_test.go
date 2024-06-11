@@ -5,10 +5,10 @@
 
 package redis
 
-import dataInterfaces "github.com/edgexfoundry/edgex-go/internal/core/data/infrastructure/interfaces"
-import metadataInterfaces "github.com/edgexfoundry/edgex-go/internal/core/metadata/infrastructure/interfaces"
-import schedulerInterfaces "github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
-import notificationsInterfaces "github.com/edgexfoundry/edgex-go/internal/support/notifications/infrastructure/interfaces"
+import dataInterfaces "github.com/agile-edgex/edgex-go/internal/core/data/infrastructure/interfaces"
+import metadataInterfaces "github.com/agile-edgex/edgex-go/internal/core/metadata/infrastructure/interfaces"
+import schedulerInterfaces "github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+import notificationsInterfaces "github.com/agile-edgex/edgex-go/internal/support/notifications/infrastructure/interfaces"
 
 // Check the implementation of Redis satisfies the DB client
 var _ dataInterfaces.DBClient = &Client{}

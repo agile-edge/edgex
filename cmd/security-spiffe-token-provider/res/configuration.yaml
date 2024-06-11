@@ -11,4 +11,4 @@ TokenConfig:
   UserPassMountPoint: userpass
 Spiffe:
   EndpointSocket: /tmp/edgex/secrets/spiffe/public/api.sock
-  TrustDomain: edgexfoundry.org
+  TrustDomain: agile-edgex.org

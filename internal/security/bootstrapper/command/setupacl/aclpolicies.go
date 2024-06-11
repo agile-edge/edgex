@@ -23,9 +23,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/setupacl/share"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/setupacl/share"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
 )
 
 const (

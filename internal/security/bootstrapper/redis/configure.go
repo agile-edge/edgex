@@ -21,17 +21,17 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/redis/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/redis/container"
-	redisHandlers "github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/redis/handlers"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/container"
+	redisHandlers "github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/handlers"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/flags"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 )
 
 // Configure is the main entry point for configuring the database redis before startup

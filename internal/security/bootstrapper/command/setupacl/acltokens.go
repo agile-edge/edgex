@@ -28,11 +28,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/setupacl/share"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/setupacl/share"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
 )
 
 // AgentTokenType is the type of token to be set on the Consul agent

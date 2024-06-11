@@ -13,4 +13,4 @@ Go to the root directory of the repository and use the Makefile to build the doc
 $ make docker_security_proxy_setup
 ```
 
-It should create a docker image with the name `edgexfoundry/docker_security_proxy_setup:<version>-dev` if successfully built.
+It should create a docker image with the name `agile-edgex/docker_security_proxy_setup:<version>-dev` if successfully built.

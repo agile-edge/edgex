@@ -8,12 +8,12 @@ package redis
 import (
 	"fmt"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
-	model "github.com/edgexfoundry/go-mod-core-contracts/v3/models"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	model "github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
-	"github.com/edgexfoundry/edgex-go/internal/pkg/db"
-	redisClient "github.com/edgexfoundry/edgex-go/internal/pkg/db/redis"
+	"github.com/agile-edgex/edgex-go/internal/pkg/db"
+	redisClient "github.com/agile-edgex/edgex-go/internal/pkg/db/redis"
 
 	"github.com/google/uuid"
 )

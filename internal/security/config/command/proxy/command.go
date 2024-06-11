@@ -9,13 +9,13 @@ package proxy
 import (
 	"fmt"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command/proxy/adduser"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command/proxy/deluser"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command/proxy/tls"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex-go/internal/security/config/command/proxy/adduser"
+	"github.com/agile-edgex/edgex-go/internal/security/config/command/proxy/deluser"
+	"github.com/agile-edgex/edgex-go/internal/security/config/command/proxy/tls"
+	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

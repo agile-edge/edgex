@@ -31,11 +31,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/helper"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/helper"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 func TestNewCommand(t *testing.T) {

@@ -14,18 +14,18 @@ import (
 
 	"github.com/fxamacker/cbor/v2"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/data/application"
-	dataContainer "github.com/edgexfoundry/edgex-go/internal/core/data/container"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/edgex-go/internal/core/data/application"
+	dataContainer "github.com/agile-edgex/edgex-go/internal/core/data/container"
+	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
 
-	"github.com/edgexfoundry/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/requests"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 )
 
 // SubscribeEvents subscribes to events from message bus

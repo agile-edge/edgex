@@ -29,7 +29,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
 )
 
 type registryTestServer struct {

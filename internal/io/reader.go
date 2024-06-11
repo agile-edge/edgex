@@ -11,8 +11,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 
 	"github.com/fxamacker/cbor/v2"
 	"gopkg.in/yaml.v3"

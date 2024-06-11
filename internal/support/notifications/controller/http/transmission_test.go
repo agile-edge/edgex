@@ -12,16 +12,16 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
-	dbMock "github.com/edgexfoundry/edgex-go/internal/support/notifications/infrastructure/interfaces/mocks"
+	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	dbMock "github.com/agile-edgex/edgex-go/internal/support/notifications/infrastructure/interfaces/mocks"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	commonDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/common"
-	responseDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/responses"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/models"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
+	responseDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"

@@ -25,13 +25,13 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/secret"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )
 
 const (

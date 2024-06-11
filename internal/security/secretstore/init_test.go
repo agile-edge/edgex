@@ -12,11 +12,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

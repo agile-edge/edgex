@@ -6,14 +6,14 @@
 package scheduler
 
 import (
-	"github.com/edgexfoundry/edgex-go"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/controller"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/handlers"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/edgex-go"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/controller"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/handlers"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
-	schedulerController "github.com/edgexfoundry/edgex-go/internal/support/scheduler/controller/http"
+	schedulerController "github.com/agile-edgex/edgex-go/internal/support/scheduler/controller/http"
 
 	"github.com/labstack/echo/v4"
 )

@@ -10,18 +10,18 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/data/application"
-	dataContainer "github.com/edgexfoundry/edgex-go/internal/core/data/container"
-	edgexIO "github.com/edgexfoundry/edgex-go/internal/io"
-	"github.com/edgexfoundry/edgex-go/internal/pkg"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/common"
-	commonDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/common"
-	requestDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/requests"
-	responseDTO "github.com/edgexfoundry/go-mod-core-contracts/v3/dtos/responses"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edgex/edgex-go/internal/core/data/application"
+	dataContainer "github.com/agile-edgex/edgex-go/internal/core/data/container"
+	edgexIO "github.com/agile-edgex/edgex-go/internal/io"
+	"github.com/agile-edgex/edgex-go/internal/pkg"
+	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
+	requestDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
+	responseDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 
 	"github.com/labstack/echo/v4"
 )
@@ -99,7 +99,7 @@ func (ec *EventController) AddEvent(c echo.Context) error {
 	}
 
 	if err == nil {
-		// Per https://github.com/edgexfoundry/edgex-go/pull/3202#discussion_r587618347
+		// Per https://github.com/agile-edgex/edgex-go/pull/3202#discussion_r587618347
 		// it is decided to asynchronously publish initially encoded payload (not re-encoding) to message bus
 		go ec.app.PublishEvent(dataBytes, serviceName, profileName, deviceName, sourceName, ctx, ec.dic)
 		// unmarshal bytes to AddEventRequest

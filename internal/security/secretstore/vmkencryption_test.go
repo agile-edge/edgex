@@ -10,11 +10,11 @@ import (
 	"errors"
 	"testing"
 
-	. "github.com/edgexfoundry/edgex-go/internal/security/kdf/mocks"
-	. "github.com/edgexfoundry/edgex-go/internal/security/pipedhexreader/mocks"
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/types"
+	. "github.com/agile-edgex/edgex-go/internal/security/kdf/mocks"
+	. "github.com/agile-edgex/edgex-go/internal/security/pipedhexreader/mocks"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
 
-	"github.com/edgexfoundry/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
+	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
 
 	"github.com/stretchr/testify/require"
 )

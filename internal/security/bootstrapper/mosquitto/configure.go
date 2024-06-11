@@ -19,10 +19,10 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/config"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/container"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/handlers"
+	"github.com/agile-edgex/edgex/internal"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/handlers"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"

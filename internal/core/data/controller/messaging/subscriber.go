@@ -14,9 +14,9 @@ import (
 
 	"github.com/fxamacker/cbor/v2"
 
-	"github.com/agile-edgex/edgex-go/internal/core/data/application"
-	dataContainer "github.com/agile-edgex/edgex-go/internal/core/data/container"
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/core/data/application"
+	dataContainer "github.com/agile-edgex/edgex/internal/core/data/container"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
 
 	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 

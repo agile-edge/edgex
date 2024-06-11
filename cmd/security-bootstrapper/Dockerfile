@@ -21,7 +21,7 @@ FROM golang:1.21-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
@@ -41,25 +41,25 @@ RUN mkdir -p ${BOOTSTRAP_REDIS_DIR} ${BOOTSTRAP_MOSQUITTO_DIR}
 WORKDIR ${SECURITY_INIT_STAGING}
 
 # copy all entrypoint scripts into shared folder
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/entrypoint-scripts/ ${SECURITY_INIT_STAGING}/
+COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint-scripts/ ${SECURITY_INIT_STAGING}/
 RUN chmod +x ${SECURITY_INIT_STAGING}/*.sh
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/security-bootstrapper .
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res/configuration.yaml ./res/
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/security-bootstrapper/security-bootstrapper .
+COPY --from=builder /edgex/cmd/security-bootstrapper/res/configuration.yaml ./res/
 
 # needed for bootstrapping Redis db
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res-bootstrap-redis/configuration.yaml ${BOOTSTRAP_REDIS_DIR}/res/
+COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-redis/configuration.yaml ${BOOTSTRAP_REDIS_DIR}/res/
 
 # needed for bootstrapping mosquitto
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res-bootstrap-mosquitto/configuration.yaml ${BOOTSTRAP_MOSQUITTO_DIR}/res/
+COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-mosquitto/configuration.yaml ${BOOTSTRAP_MOSQUITTO_DIR}/res/
 
 # copy Consul ACL related configs
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/consul-acl/ ${SECURITY_INIT_STAGING}/consul-bootstrapper/
+COPY --from=builder /edgex/cmd/security-bootstrapper/consul-acl/ ${SECURITY_INIT_STAGING}/consul-bootstrapper/
 
 # setup entry point script
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/entrypoint.sh /
+COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

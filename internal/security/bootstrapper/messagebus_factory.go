@@ -19,7 +19,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
 )
 

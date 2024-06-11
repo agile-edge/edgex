@@ -13,7 +13,7 @@ import (
 	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
-	pkgCommon "github.com/agile-edgex/edgex-go/internal/pkg/common"
+	pkgCommon "github.com/agile-edgex/edgex/internal/pkg/common"
 
 	"github.com/gomodule/redigo/redis"
 	"github.com/google/uuid"

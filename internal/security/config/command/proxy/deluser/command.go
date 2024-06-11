@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal/security/config/command/proxy/shared"
-	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
-	secretStoreConfig "github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/config/command/proxy/shared"
+	"github.com/agile-edgex/edgex/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/config"
+	secretStoreConfig "github.com/agile-edgex/edgex/internal/security/secretstore/config"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )

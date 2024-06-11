@@ -10,7 +10,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal/security/config"
+	"github.com/agile-edgex/edgex/internal/security/config"
 )
 
 func main() {

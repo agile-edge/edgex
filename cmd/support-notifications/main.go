@@ -24,7 +24,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex-go/internal/support/notifications"
+	"github.com/agile-edgex/edgex/internal/support/notifications"
 
 	"github.com/labstack/echo/v4"
 )

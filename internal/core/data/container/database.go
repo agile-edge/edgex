@@ -6,7 +6,7 @@
 package container
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/core/data/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex/internal/core/data/infrastructure/interfaces"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )

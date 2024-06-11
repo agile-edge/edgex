@@ -28,10 +28,10 @@ import (
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/config"
 
-	"github.com/agile-edgex/edgex-go"
-	pkgHandlers "github.com/agile-edgex/edgex-go/internal/pkg/bootstrap/handlers"
-	notificationsConfig "github.com/agile-edgex/edgex-go/internal/support/notifications/config"
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/edgex"
+	pkgHandlers "github.com/agile-edgex/edgex/internal/pkg/bootstrap/handlers"
+	notificationsConfig "github.com/agile-edgex/edgex/internal/support/notifications/config"
+	"github.com/agile-edgex/edgex/internal/support/notifications/container"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"

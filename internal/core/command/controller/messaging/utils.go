@@ -21,7 +21,7 @@ import (
 
 	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 
-	"github.com/agile-edgex/edgex-go/internal/core/command/application"
+	"github.com/agile-edgex/edgex/internal/core/command/application"
 )
 
 // retrieveServiceNameByDevice validates the existence of device and device service,

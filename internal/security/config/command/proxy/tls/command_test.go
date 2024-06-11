@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex/internal/security/config/interfaces"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"

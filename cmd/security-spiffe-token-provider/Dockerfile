@@ -19,7 +19,7 @@ FROM golang:1.21-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
@@ -29,10 +29,10 @@ RUN make cmd/security-spiffe-token-provider/security-spiffe-token-provider
 #Next image - Copy built Go binary into new workspace
 FROM debian:bookworm-slim
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
-COPY --from=builder /edgex-go/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
+COPY --from=builder /edgex/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
 
 ENTRYPOINT [ "/security-spiffe-token-provider" ]
 CMD ["-cp=consul.http://edgex-core-consul:8500"]

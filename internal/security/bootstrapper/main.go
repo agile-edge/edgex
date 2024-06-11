@@ -23,11 +23,11 @@ import (
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
-	bootstrapper "github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/container"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/handlers"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis"
+	bootstrapper "github.com/agile-edgex/edgex/internal/security/bootstrapper/command"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/container"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/handlers"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"

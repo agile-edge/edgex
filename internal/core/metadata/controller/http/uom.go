@@ -13,9 +13,9 @@ import (
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/container"
-	"github.com/agile-edgex/edgex-go/internal/pkg"
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/core/metadata/container"
+	"github.com/agile-edgex/edgex/internal/pkg"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
 
 	"github.com/labstack/echo/v4"
 )

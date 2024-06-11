@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/config"
+	"github.com/agile-edgex/edgex/internal/support/notifications/config"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"

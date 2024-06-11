@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/gate"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/genpassword"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/gethttpstatus"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/listen"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/setupacl"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/command/waitfor"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/gate"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/genpassword"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/gethttpstatus"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/listen"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/setupacl"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/command/waitfor"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/interfaces"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )

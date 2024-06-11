@@ -17,7 +17,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata"
+	"github.com/agile-edgex/edgex/internal/core/metadata"
 
 	"github.com/labstack/echo/v4"
 )

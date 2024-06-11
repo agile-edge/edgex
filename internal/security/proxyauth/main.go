@@ -28,9 +28,9 @@ import (
 	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
-	"github.com/agile-edgex/edgex-go"
-	"github.com/agile-edgex/edgex-go/internal/security/proxyauth/config"
-	"github.com/agile-edgex/edgex-go/internal/security/proxyauth/container"
+	"github.com/agile-edgex/edgex"
+	"github.com/agile-edgex/edgex/internal/security/proxyauth/config"
+	"github.com/agile-edgex/edgex/internal/security/proxyauth/container"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 

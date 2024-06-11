@@ -13,9 +13,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/config"
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
-	dbMock "github.com/agile-edgex/edgex-go/internal/support/notifications/infrastructure/interfaces/mocks"
+	"github.com/agile-edgex/edgex/internal/support/notifications/config"
+	"github.com/agile-edgex/edgex/internal/support/notifications/container"
+	dbMock "github.com/agile-edgex/edgex/internal/support/notifications/infrastructure/interfaces/mocks"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"

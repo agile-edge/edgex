@@ -21,9 +21,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/application"
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/application/channel"
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/edgex/internal/support/notifications/application"
+	"github.com/agile-edgex/edgex/internal/support/notifications/application/channel"
+	"github.com/agile-edgex/edgex/internal/support/notifications/container"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"

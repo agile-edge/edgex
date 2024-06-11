@@ -21,9 +21,9 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/config"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/container"
-	redisHandlers "github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/handlers"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/container"
+	redisHandlers "github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/handlers"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"

@@ -17,7 +17,7 @@
 package container
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/config"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )

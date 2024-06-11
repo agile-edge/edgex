@@ -9,12 +9,12 @@ import (
 	"math"
 	"net/http"
 
-	"github.com/agile-edgex/edgex-go/internal/io"
-	"github.com/agile-edgex/edgex-go/internal/pkg"
-	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/application"
-	notificationContainer "github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/edgex/internal/io"
+	"github.com/agile-edgex/edgex/internal/pkg"
+	"github.com/agile-edgex/edgex/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/support/notifications/application"
+	notificationContainer "github.com/agile-edgex/edgex/internal/support/notifications/container"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"

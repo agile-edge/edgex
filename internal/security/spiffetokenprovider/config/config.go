@@ -16,7 +16,7 @@
 package config
 
 import (
-	fileProviderConfig "github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
+	fileProviderConfig "github.com/agile-edgex/edgex/internal/security/fileprovider/config"
 	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
 )
 

@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/agile-edgex/edgex-go/internal/pkg"
-	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex/internal/pkg"
+	"github.com/agile-edgex/edgex/internal/pkg/correlation"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"

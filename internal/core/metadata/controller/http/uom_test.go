@@ -18,8 +18,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/container"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/uom"
+	"github.com/agile-edgex/edgex/internal/core/metadata/container"
+	"github.com/agile-edgex/edgex/internal/core/metadata/uom"
 
 	"github.com/labstack/echo/v4"
 )

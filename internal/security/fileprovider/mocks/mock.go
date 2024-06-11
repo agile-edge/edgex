@@ -17,8 +17,8 @@
 package mocks
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
-	secretStoreConfig "github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/fileprovider/config"
+	secretStoreConfig "github.com/agile-edgex/edgex/internal/security/secretstore/config"
 
 	"github.com/stretchr/testify/mock"
 )

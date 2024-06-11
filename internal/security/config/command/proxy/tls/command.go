@@ -13,8 +13,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/agile-edgex/edgex-go/internal"
-	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex/internal"
+	"github.com/agile-edgex/edgex/internal/security/config/interfaces"
 	"github.com/agile-edgex/go-mod-secrets/v3/pkg"
 	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
 

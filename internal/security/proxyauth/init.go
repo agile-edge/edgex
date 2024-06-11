@@ -20,7 +20,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/agile-edgex/edgex-go"
+	"github.com/agile-edgex/edgex"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/controller"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/handlers"

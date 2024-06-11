@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal"
+	"github.com/agile-edgex/edgex/internal"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
 )

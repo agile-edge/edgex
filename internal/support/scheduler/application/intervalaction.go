@@ -9,9 +9,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/container"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/container"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/infrastructure/interfaces"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"

@@ -24,9 +24,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/interfaces"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/tcp"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/tcp"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )

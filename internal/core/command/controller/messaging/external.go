@@ -21,7 +21,7 @@ import (
 
 	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 
-	"github.com/agile-edgex/edgex-go/internal/core/command/container"
+	"github.com/agile-edgex/edgex/internal/core/command/container"
 )
 
 func OnConnectHandler(requestTimeout time.Duration, dic *di.Container) mqtt.OnConnectHandler {

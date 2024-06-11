@@ -21,7 +21,7 @@ FROM golang:1.21-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
@@ -35,10 +35,10 @@ ENV APP_PORT=59861
 #expose support scheduler port
 EXPOSE $APP_PORT
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/support-scheduler/support-scheduler /
-COPY --from=builder /edgex-go/cmd/support-scheduler/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/support-scheduler/support-scheduler /
+COPY --from=builder /edgex/cmd/support-scheduler/res/configuration.yaml /res/configuration.yaml
 
 ENTRYPOINT ["/support-scheduler"]
 CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]

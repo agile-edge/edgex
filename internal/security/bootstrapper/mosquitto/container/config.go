@@ -15,7 +15,7 @@
 package container
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/config"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )

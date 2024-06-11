@@ -1,4 +1,4 @@
-module github.com/agile-edgex/edgex-go
+module github.com/agile-edgex/edgex
 
 go 1.21
 

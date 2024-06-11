@@ -37,8 +37,8 @@ import (
 	"github.com/spiffe/go-spiffe/v2/spiffetls/tlsconfig"
 	"github.com/spiffe/go-spiffe/v2/workloadapi"
 
-	"github.com/agile-edgex/edgex-go/internal"
-	"github.com/agile-edgex/edgex-go/internal/security/spiffetokenprovider/container"
+	"github.com/agile-edgex/edgex/internal"
+	"github.com/agile-edgex/edgex/internal/security/spiffetokenprovider/container"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"

@@ -20,7 +20,7 @@ FROM golang:1.21-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
@@ -30,12 +30,12 @@ RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-common-config-bootstrapper/c
 #Next image - Copy built Go binary into new workspace
 FROM debian:bookworm-slim
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
 
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 

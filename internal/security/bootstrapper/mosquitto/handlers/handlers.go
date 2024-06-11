@@ -25,7 +25,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/container"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"

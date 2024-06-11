@@ -6,7 +6,7 @@
 package application
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edgex/edgex/internal/support/notifications/container"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"

@@ -31,10 +31,10 @@ import (
 	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
-	"github.com/agile-edgex/edgex-go"
-	"github.com/agile-edgex/edgex-go/internal/core/command/config"
-	"github.com/agile-edgex/edgex-go/internal/core/command/container"
-	"github.com/agile-edgex/edgex-go/internal/core/command/controller/messaging"
+	"github.com/agile-edgex/edgex"
+	"github.com/agile-edgex/edgex/internal/core/command/config"
+	"github.com/agile-edgex/edgex/internal/core/command/container"
+	"github.com/agile-edgex/edgex/internal/core/command/controller/messaging"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 

@@ -12,8 +12,8 @@ import (
 	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 	model "github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
-	"github.com/agile-edgex/edgex-go/internal/pkg/db"
-	redisClient "github.com/agile-edgex/edgex-go/internal/pkg/db/redis"
+	"github.com/agile-edgex/edgex/internal/pkg/db"
+	redisClient "github.com/agile-edgex/edgex/internal/pkg/db/redis"
 
 	"github.com/google/uuid"
 )

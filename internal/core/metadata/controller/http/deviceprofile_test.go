@@ -31,9 +31,9 @@ import (
 	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/config"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/container"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/infrastructure/interfaces/mocks"
+	"github.com/agile-edgex/edgex/internal/core/metadata/config"
+	"github.com/agile-edgex/edgex/internal/core/metadata/container"
+	"github.com/agile-edgex/edgex/internal/core/metadata/infrastructure/interfaces/mocks"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"

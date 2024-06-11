@@ -20,8 +20,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/config"
-	messagebus "github.com/agile-edgex/edgex-go/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/config"
+	messagebus "github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces/mocks"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/messaging"

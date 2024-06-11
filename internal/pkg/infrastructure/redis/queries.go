@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	pkgCommon "github.com/agile-edgex/edgex-go/internal/pkg/common"
+	pkgCommon "github.com/agile-edgex/edgex/internal/pkg/common"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 

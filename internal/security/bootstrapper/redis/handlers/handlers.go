@@ -24,8 +24,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/helper"
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/container"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/helper"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/container"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"

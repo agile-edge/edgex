@@ -20,11 +20,11 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/config"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/container"
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/uom"
-	pkgHandlers "github.com/agile-edgex/edgex-go/internal/pkg/bootstrap/handlers"
+	"github.com/agile-edgex/edgex"
+	"github.com/agile-edgex/edgex/internal/core/metadata/config"
+	"github.com/agile-edgex/edgex/internal/core/metadata/container"
+	"github.com/agile-edgex/edgex/internal/core/metadata/uom"
+	pkgHandlers "github.com/agile-edgex/edgex/internal/pkg/bootstrap/handlers"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 

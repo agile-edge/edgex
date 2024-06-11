@@ -24,8 +24,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/secretsengine"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/tokencreatable"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/secretsengine"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/tokencreatable"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"

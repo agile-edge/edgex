@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	bootstrapInterfaces "github.com/agile-edgex/edgex-go/internal/pkg/bootstrap/interfaces"
-	"github.com/agile-edgex/edgex-go/internal/pkg/db"
-	"github.com/agile-edgex/edgex-go/internal/pkg/infrastructure/redis"
-	"github.com/agile-edgex/edgex-go/internal/pkg/interfaces"
+	bootstrapInterfaces "github.com/agile-edgex/edgex/internal/pkg/bootstrap/interfaces"
+	"github.com/agile-edgex/edgex/internal/pkg/db"
+	"github.com/agile-edgex/edgex/internal/pkg/infrastructure/redis"
+	"github.com/agile-edgex/edgex/internal/pkg/interfaces"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"

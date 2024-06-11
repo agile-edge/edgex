@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/edgex-go/internal/core/data/container"
-	dbMock "github.com/agile-edgex/edgex-go/internal/core/data/infrastructure/interfaces/mocks"
-	"github.com/agile-edgex/edgex-go/internal/core/data/mocks"
+	"github.com/agile-edgex/edgex/internal/core/data/container"
+	dbMock "github.com/agile-edgex/edgex/internal/core/data/infrastructure/interfaces/mocks"
+	"github.com/agile-edgex/edgex/internal/core/data/mocks"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
 	responseDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"

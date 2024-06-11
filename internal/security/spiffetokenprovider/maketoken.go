@@ -19,10 +19,10 @@ package spiffetokenprovider
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex-go/internal/security/common"
-	securityCommon "github.com/agile-edgex/edgex-go/internal/security/common"
-	fileProviderConfig "github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore"
+	"github.com/agile-edgex/edgex/internal/security/common"
+	securityCommon "github.com/agile-edgex/edgex/internal/security/common"
+	fileProviderConfig "github.com/agile-edgex/edgex/internal/security/fileprovider/config"
+	"github.com/agile-edgex/edgex/internal/security/secretstore"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
 )

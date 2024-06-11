@@ -17,7 +17,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/config"
 )
 
 func TestInvalidPasswordProvider(t *testing.T) {

@@ -13,10 +13,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/agile-edgex/edgex-go/internal/security/config/command/help"
-	"github.com/agile-edgex/edgex-go/internal/security/config/command/proxy"
-	"github.com/agile-edgex/edgex-go/internal/security/config/interfaces"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/container"
+	"github.com/agile-edgex/edgex/internal/security/config/command/help"
+	"github.com/agile-edgex/edgex/internal/security/config/command/proxy"
+	"github.com/agile-edgex/edgex/internal/security/config/interfaces"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/container"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"

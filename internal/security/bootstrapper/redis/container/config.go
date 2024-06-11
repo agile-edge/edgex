@@ -17,7 +17,7 @@
 package container
 
 import (
-	"github.com/agile-edgex/edgex-go/internal/security/bootstrapper/redis/config"
+	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/config"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 )

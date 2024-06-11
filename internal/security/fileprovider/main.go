@@ -19,8 +19,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
-	"github.com/agile-edgex/edgex-go/internal/security/fileprovider/container"
+	"github.com/agile-edgex/edgex/internal/security/fileprovider/config"
+	"github.com/agile-edgex/edgex/internal/security/fileprovider/container"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"

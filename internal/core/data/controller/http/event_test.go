@@ -27,11 +27,11 @@ import (
 	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
 
-	"github.com/agile-edgex/edgex-go/internal/core/data/application"
-	"github.com/agile-edgex/edgex-go/internal/core/data/config"
-	"github.com/agile-edgex/edgex-go/internal/core/data/container"
-	dbMock "github.com/agile-edgex/edgex-go/internal/core/data/infrastructure/interfaces/mocks"
-	"github.com/agile-edgex/edgex-go/internal/core/data/mocks"
+	"github.com/agile-edgex/edgex/internal/core/data/application"
+	"github.com/agile-edgex/edgex/internal/core/data/config"
+	"github.com/agile-edgex/edgex/internal/core/data/container"
+	dbMock "github.com/agile-edgex/edgex/internal/core/data/infrastructure/interfaces/mocks"
+	"github.com/agile-edgex/edgex/internal/core/data/mocks"
 
 	"github.com/labstack/echo/v4"
 )

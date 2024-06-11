@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/config"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/config"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/infrastructure/interfaces"
 
 	bootstrapInterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"

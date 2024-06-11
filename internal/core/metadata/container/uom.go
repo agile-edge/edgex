@@ -8,7 +8,7 @@ package container
 import (
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex/internal/core/metadata/infrastructure/interfaces"
 )
 
 // UnitsOfMeasureInterfaceName contains the name of the interfaces.UnitsOfMeasure implementation in the DIC.

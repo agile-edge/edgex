@@ -8,11 +8,11 @@ package http
 import (
 	"net/http"
 
-	"github.com/agile-edgex/edgex-go/internal/core/metadata/application"
-	"github.com/agile-edgex/edgex-go/internal/io"
-	"github.com/agile-edgex/edgex-go/internal/pkg"
-	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/core/metadata/application"
+	"github.com/agile-edgex/edgex/internal/io"
+	"github.com/agile-edgex/edgex/internal/pkg"
+	"github.com/agile-edgex/edgex/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"

@@ -10,10 +10,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/agile-edgex/edgex-go/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex-go/internal/pkg/utils"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/container"
-	"github.com/agile-edgex/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edgex/edgex/internal/pkg/correlation"
+	"github.com/agile-edgex/edgex/internal/pkg/utils"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/container"
+	"github.com/agile-edgex/edgex/internal/support/scheduler/infrastructure/interfaces"
 
 	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"

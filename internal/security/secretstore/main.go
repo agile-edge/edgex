@@ -24,8 +24,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore/container"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/secretstore/container"
 
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"

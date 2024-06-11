@@ -27,7 +27,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/agile-edgex/edgex-go/internal"
+	"github.com/agile-edgex/edgex/internal"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )

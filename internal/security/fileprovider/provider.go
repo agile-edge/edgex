@@ -23,11 +23,11 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/agile-edgex/edgex-go/internal/security/common"
-	securityCommon "github.com/agile-edgex/edgex-go/internal/security/common"
-	"github.com/agile-edgex/edgex-go/internal/security/fileprovider/config"
-	"github.com/agile-edgex/edgex-go/internal/security/secretstore"
-	secretstoreConfig "github.com/agile-edgex/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edgex/edgex/internal/security/common"
+	securityCommon "github.com/agile-edgex/edgex/internal/security/common"
+	"github.com/agile-edgex/edgex/internal/security/fileprovider/config"
+	"github.com/agile-edgex/edgex/internal/security/secretstore"
+	secretstoreConfig "github.com/agile-edgex/edgex/internal/security/secretstore/config"
 	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
 
 	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"

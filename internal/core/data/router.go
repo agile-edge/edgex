@@ -7,14 +7,14 @@
 package data
 
 import (
-	"github.com/agile-edgex/edgex-go"
+	"github.com/agile-edgex/edgex"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/controller"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/handlers"
 	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
 
-	dataController "github.com/agile-edgex/edgex-go/internal/core/data/controller/http"
+	dataController "github.com/agile-edgex/edgex/internal/core/data/controller/http"
 
 	"github.com/labstack/echo/v4"
 )

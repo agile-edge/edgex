@@ -15,10 +15,6 @@
 # 
 #  ----------------------------------------------------------------------------------
 
-# Build utility container
-ARG BUILDER_BASE=golang:1.21-alpine3.18
-FROM ${BUILDER_BASE} AS builder
-
 FROM ghcr.io/spiffe/spire-server:1.9.5 as spire_server
 
 # Deployment image

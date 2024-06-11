@@ -16,31 +16,19 @@
 #  SPDX-License-Identifier: Apache-2.0
 #  ----------------------------------------------------------------------------------
 
-# Docker image for Golang Core common config bootstrapper service
-ARG BUILDER_BASE=golang:1.21-alpine3.18
-FROM ${BUILDER_BASE} AS builder
+FROM golang:1.21-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex-go
 
-RUN apk add --update --no-cache make git
-
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
-
 COPY . .
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
 RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/security-proxy-auth/security-proxy-auth
 
 #Next image - Copy built Go binary into new workspace
-FROM alpine:3.18
-
-LABEL license='SPDX-License-Identifier: Apache-2.0' \
-      copyright='Copyright (c) 2023: Intel Corporation'
-
-RUN apk add --update --no-cache dumb-init
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+FROM debian:bookworm-slim
 
 COPY --from=builder /edgex-go/Attribution.txt /
 COPY --from=builder /edgex-go/security.txt /

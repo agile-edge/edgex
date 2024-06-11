@@ -15,29 +15,19 @@
 # 
 #  ----------------------------------------------------------------------------------
 
-# Build utility container
-ARG BUILDER_BASE=golang:1.21-alpine3.18
-FROM ${BUILDER_BASE} AS builder
+FROM golang:1.21-bookworm AS builder
+
+ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex-go
 
-RUN apk update && apk --no-cache --update add build-base
-
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
-
 COPY . .
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
 RUN make cmd/security-spiffe-token-provider/security-spiffe-token-provider
 
-# Deployment image
-FROM alpine:3.18
-
-LABEL license='SPDX-License-Identifier: Apache-2.0' \
-      copyright='Copyright (c) 2023 Intel Corporation'
-
-RUN apk update && apk --no-cache --update add dumb-init curl gcompat
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+#Next image - Copy built Go binary into new workspace
+FROM debian:bookworm-slim
 
 COPY --from=builder /edgex-go/Attribution.txt /
 COPY --from=builder /edgex-go/security.txt /

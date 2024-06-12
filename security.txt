@@ -8,7 +8,7 @@ Contact: mailto:security-issues@lists.agile-edgex.org
 
 Preferred-Languages: en
 
-Canonical: https://github.com/agile-edgex/edgex-go/blob/main/security.txt
+Canonical: https://github.com/agile-edgex/edgex/blob/main/security.txt
 
 Policy: https://wiki.agile-edgex.org/display/FA/Security
 

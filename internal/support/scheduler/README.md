@@ -8,8 +8,8 @@ To fetch the code and build the microservice execute the following:
 
 ```
 cd $GOPATH/src
-go get github.com/agile-edgex/edgex-go
-cd $GOPATH/src/github.com/agile-edgex/edgex-go
+go get github.com/agile-edgex/edgex
+cd $GOPATH/src/github.com/agile-edgex/edgex
 # pull the 3rd party / vendor packages
 make prepare
 # build the microservice
@@ -23,7 +23,7 @@ To test, simple run:
 
 ```
 cd $GOPATH/src
-go get github.com/agile-edgex/edgex-go
+go get github.com/agile-edgex/edgex
 # pull the 3rd party / vendor packages
 make prepare
 # build the microservice
@@ -42,8 +42,8 @@ See https://docs.docker.com/install/ to learn how to obtain and install Docker.
 
 ```
 cd $GOPATH/src
-go get github.com/agile-edgex/edgex-go
-cd $GOPATH/src/github.com/agile-edgex/edgex-go
+go get github.com/agile-edgex/edgex
+cd $GOPATH/src/github.com/agile-edgex/edgex
 # To create the Docker image
 sudo make docker_support_scheduler
 # To create a containter from the image

@@ -1,4 +1,4 @@
-#!/usr/bin/dumb-init /bin/sh
+#!/usr/bin/bash
 #  ----------------------------------------------------------------------------------
 #  Copyright (c) 2023 Intel Corporation
 #

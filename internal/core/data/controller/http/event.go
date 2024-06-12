@@ -99,7 +99,7 @@ func (ec *EventController) AddEvent(c echo.Context) error {
 	}
 
 	if err == nil {
-		// Per https://github.com/agile-edgex/edgex-go/pull/3202#discussion_r587618347
+		// Per https://github.com/agile-edgex/edgex/pull/3202#discussion_r587618347
 		// it is decided to asynchronously publish initially encoded payload (not re-encoding) to message bus
 		go ec.app.PublishEvent(dataBytes, serviceName, profileName, deviceName, sourceName, ctx, ec.dic)
 		// unmarshal bytes to AddEventRequest

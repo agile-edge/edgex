@@ -12,7 +12,7 @@ Reporting issues is a great way to contribute to the project. We always apprecia
 thorough bug reports.
 
 Prior to raising a new issue, check out [our issue
-list](https://github.com/agile-edgex/edgex-go/issues) to determine whether it already include the
+list](https://github.com/agile-edgex/edgex/issues) to determine whether it already include the
 problem you are facing.
 
 A good bug report shouldn't leave others needing to chase you up for more information. Please try to
@@ -44,13 +44,13 @@ Adhering to the following process is the best way to get your work included in t
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/edgex-go.git
+   git clone https://github.com/<your-username>/edgex.git
 
    # Navigate to the newly cloned directory
-   cd edgex-go
+   cd edgex
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/agile-edgex/edgex-go.git
+   git remote add upstream https://github.com/agile-edgex/edgex.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

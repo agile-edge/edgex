@@ -54,7 +54,7 @@ VERSION=$(shell (git branch --show-current | sed 's/^release\///' | sed 's/^v//'
 #DOCKER_TAG=$(VERSION)-$(shell git log -1 --format=%h)
 DOCKER_TAG=$(VERSION)
 
-GOFLAGS=-ldflags "-X github.com/agile-edgex/edgex-go.Version=$(VERSION)" -trimpath -mod=readonly
+GOFLAGS=-ldflags "-X github.com/agile-edgex/edgex.Version=$(VERSION)" -trimpath -mod=readonly
 GOTESTFLAGS?=-race
 
 GIT_SHA=$(shell git rev-parse HEAD)
@@ -303,16 +303,16 @@ docker_security_spiffe_token_provider:
 
 sbom:
 	docker run -it --rm \
-		-v "$$PWD:/edgex-go" -v "$$PWD/sbom:/sbom" \
-		spdx/spdx-sbom-generator -p /edgex-go/ -o /sbom/ --include-license-text true
+		-v "$$PWD:/edgex" -v "$$PWD/sbom:/sbom" \
+		spdx/spdx-sbom-generator -p /edgex/ -o /sbom/ --include-license-text true
 
 docker-fuzz:
-	docker build -t fuzz-edgex-go:latest -f fuzz_test/Dockerfile.fuzz .
+	docker build -t fuzz-edgex:latest -f fuzz_test/Dockerfile.fuzz .
 
 fuzz-test-command:
 # not joining the edgex-network due to swagger file url pointing to localhost for fuzz testing in the container
-	docker run --net host --rm -v "$$PWD/fuzz_test/fuzz_results:/fuzz_results" fuzz-edgex-go:latest core-command /restler-fuzzer/openapi/core-command.yaml
+	docker run --net host --rm -v "$$PWD/fuzz_test/fuzz_results:/fuzz_results" fuzz-edgex:latest core-command /restler-fuzzer/openapi/core-command.yaml
 
 fuzz-test-data:
 # not joining the edgex-network due to swagger file url pointing to localhost for fuzz testing in the container
-	docker run --net host --rm -v "$$PWD/fuzz_test/fuzz_results:/fuzz_results" fuzz-edgex-go:latest core-data /restler-fuzzer/openapi/core-data.yaml
+	docker run --net host --rm -v "$$PWD/fuzz_test/fuzz_results:/fuzz_results" fuzz-edgex:latest core-data /restler-fuzzer/openapi/core-data.yaml

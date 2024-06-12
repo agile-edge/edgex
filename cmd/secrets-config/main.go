@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	os.Setenv("LOGLEVEL", "ERROR") // Workaround for https://github.com/agile-edgex/edgex-go/issues/2922
+	os.Setenv("LOGLEVEL", "ERROR") // Workaround for https://github.com/agile-edgex/edgex/issues/2922
 	ctx, cancel := context.WithCancel(context.Background())
 	exitStatusCode := config.Main(ctx, cancel)
 	os.Exit(exitStatusCode)

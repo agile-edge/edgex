@@ -165,7 +165,7 @@ path "` + secretsengine.ConsulSecretEngineMountPoint + `/roles/*" {
 func getFunctionName(f interface{}) string {
 	createTokenFuncName := runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name()
 	// On runtime, this will get us something like:
-	// github.com/agile-edgex/edgex-go/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
+	// github.com/agile-edgex/edgex/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	// but we only want to get the last part of string after last "/",
 	// i.e. secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	elementName := strings.Split(createTokenFuncName, "/")

@@ -1,11 +1,11 @@
 # EdgeX Foundry Services
-[![Build Status](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex-go/job/main/badge/icon)](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex-go/job/main/) [![Code Coverage](https://codecov.io/gh/agile-edgex/edgex-go/branch/main/graph/badge.svg?token=Y3mpessZqk)](https://codecov.io/gh/agile-edgex/edgex-go) [![Go Report Card](https://goreportcard.com/badge/github.com/agile-edgex/edgex-go)](https://goreportcard.com/report/github.com/agile-edgex/edgex-go) [![GitHub Latest Dev Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex-go?include_prereleases&sort=semver&label=latest-dev)](https://github.com/agile-edgex/edgex-go/tags) ![GitHub Latest Stable Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex-go?sort=semver&label=latest-stable) [![GitHub License](https://img.shields.io/github/license/agile-edgex/edgex-go)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/agile-edgex/edgex-go) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/agile-edgex/edgex-go)](https://github.com/agile-edgex/edgex-go/pulls) [![GitHub Contributors](https://img.shields.io/github/contributors/agile-edgex/edgex-go)](https://github.com/agile-edgex/edgex-go/contributors) [![GitHub Committers](https://img.shields.io/badge/team-committers-green)](https://github.com/orgs/agile-edgex/teams/edgex-go-committers/members) [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/agile-edgex/edgex-go)](https://github.com/agile-edgex/edgex-go/commits)
+[![Build Status](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex/job/main/badge/icon)](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex/job/main/) [![Code Coverage](https://codecov.io/gh/agile-edgex/edgex/branch/main/graph/badge.svg?token=Y3mpessZqk)](https://codecov.io/gh/agile-edgex/edgex) [![Go Report Card](https://goreportcard.com/badge/github.com/agile-edgex/edgex)](https://goreportcard.com/report/github.com/agile-edgex/edgex) [![GitHub Latest Dev Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex?include_prereleases&sort=semver&label=latest-dev)](https://github.com/agile-edgex/edgex/tags) ![GitHub Latest Stable Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex?sort=semver&label=latest-stable) [![GitHub License](https://img.shields.io/github/license/agile-edgex/edgex)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/agile-edgex/edgex) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/pulls) [![GitHub Contributors](https://img.shields.io/github/contributors/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/contributors) [![GitHub Committers](https://img.shields.io/badge/team-committers-green)](https://github.com/orgs/agile-edgex/teams/edgex-committers/members) [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/commits)
 
 > **Warning**  
 > The **main** branch of this repository contains work-in-progress development code for the upcoming release, and is **not guaranteed to be stable or working**.
 > It is only compatible with the [main branch of edgex-compose](https://github.com/agile-edgex/edgex-compose) which uses the Docker images built from the **main** branch of this repo and other repos.
 >
-> **The source for the latest release can be found at [Releases](https://github.com/agile-edgex/edgex-go/releases).**
+> **The source for the latest release can be found at [Releases](https://github.com/agile-edgex/edgex/releases).**
 
 EdgeX Foundry is a vendor-neutral open source project hosted by The Linux Foundation building a common open framework for IoT edge computing.  At the heart of the project is an interoperability framework hosted within a full hardware- and OS-agnostic reference software platform to enable an ecosystem of plug-and-play components that unifies the marketplace and accelerates the deployment of IoT solutions.  This repository contains the Go implementation of EdgeX Foundry microservices.  It also includes files for building the services, containerizing the services, and initializing (bootstrapping) the services.
 
@@ -74,8 +74,8 @@ GO111MODULE envrionment variables nor is there a requirement to root all the com
 (or $GOPATH) and use the `go get` command. In other words,
 
 ```sh
-git clone git@github.com:agile-edgex/edgex-go.git
-cd edgex-go
+git clone git@github.com:agile-edgex/edgex.git
+cd edgex
 make build
 ```
 
@@ -83,8 +83,8 @@ If you do want to root everything under $GOPATH, you're free to use that pattern
 
 ```sh
 GO111MODULE=on && export GO111MODULE
-go get github.com/agile-edgex/edgex-go
-cd $GOPATH/src/github.com/agile-edgex/edgex-go
+go get github.com/agile-edgex/edgex
+cd $GOPATH/src/github.com/agile-edgex/edgex
 make build
 ```
 
@@ -137,7 +137,7 @@ The **Compose Builder** tool has the `dev` option to generate and run EdgeX comp
 make run no-secty dev
 ```
 
-> *Note that this run all the edgex-go services using the locally built images.*
+> *Note that this run all the edgex services using the locally built images.*
 
 #### Community
 

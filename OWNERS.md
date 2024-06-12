@@ -4,5 +4,5 @@ This repository is managed by the EdgeX Core Working Group.  As such, the **Core
 
 See the [project Wiki TSC page](https://wiki.agile-edgex.org/pages/viewpage.action?pageId=329436#TechnicalSteeringCommittee(TSC)-WorkingGroups) for information on the current EdgeX TSC and who occupies the role of Core Working Group chair.
 
-For a complete list of current committers see:  https://github.com/orgs/agile-edgex/teams/edgex-go-committers/members.
+For a complete list of current committers see:  https://github.com/orgs/agile-edgex/teams/edgex-committers/members.
 

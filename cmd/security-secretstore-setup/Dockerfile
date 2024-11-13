@@ -22,9 +22,13 @@ ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex
 
-COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
+
+COPY go.mod ./
+RUN go mod download
+
+COPY . .
 RUN make cmd/security-file-token-provider/security-file-token-provider \
   cmd/security-secretstore-setup/security-secretstore-setup
 

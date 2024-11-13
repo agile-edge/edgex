@@ -161,7 +161,9 @@ test: unittest hadolint lint
 	[ "`gofmt -l $$(find . -type f -name '*.go'| grep -v "/vendor/")`" = "" ]
 	./bin/test-attribution-txt.sh
 
-docker: $(DOCKERS)
+docker-all: $(DOCKERS)
+
+docker: dcore dcommon-config dsupport
 
 docker-nats:
 	make -e ADD_BUILD_TAGS=include_nats_messaging docker

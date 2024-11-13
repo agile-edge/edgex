@@ -21,9 +21,13 @@ ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex
 
-COPY . .
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
+
+COPY go.mod ./
+RUN go mod download
+
+COPY . .
 RUN make cmd/security-spiffe-token-provider/security-spiffe-token-provider
 
 #Next image - Copy built Go binary into new workspace

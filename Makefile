@@ -179,6 +179,7 @@ docker_core_metadata:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-metadata/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-metadata:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -187,6 +188,7 @@ docker_core_metadata:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-metadata/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-metadata:$(DOCKER_TAG)-alpine \
 		.
 
@@ -198,6 +200,7 @@ docker_core_data:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-data/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-data:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -206,6 +209,7 @@ docker_core_data:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-data/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-data:$(DOCKER_TAG)-alpine \
 		.
 
@@ -217,6 +221,7 @@ docker_core_command:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-command/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-command:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -225,6 +230,7 @@ docker_core_command:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-command/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-command:$(DOCKER_TAG)-alpine \
 		.
 
@@ -236,6 +242,7 @@ docker_core_common_config:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -244,6 +251,7 @@ docker_core_common_config:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/core-common-config-bootstrapper:$(DOCKER_TAG)-alpine \
 		.
 
@@ -257,6 +265,7 @@ docker_support_notifications:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-notifications/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/support-notifications:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -265,6 +274,7 @@ docker_support_notifications:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-notifications/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/support-notifications:$(DOCKER_TAG)-alpine \
 		.
 
@@ -276,6 +286,7 @@ docker_support_scheduler:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-scheduler/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/support-scheduler:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -284,6 +295,7 @@ docker_support_scheduler:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-scheduler/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/support-scheduler:$(DOCKER_TAG)-alpine \
 		.
 
@@ -294,6 +306,7 @@ docker_security_proxy_auth:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-proxy-auth/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-proxy-auth:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -301,6 +314,7 @@ docker_security_proxy_auth:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-proxy-auth/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-proxy-auth:$(DOCKER_TAG)-alpine \
 		.
 
@@ -311,6 +325,7 @@ docker_security_proxy_setup:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-proxy-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-proxy-setup:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -318,6 +333,7 @@ docker_security_proxy_setup:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-proxy-setup/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-proxy-setup:$(DOCKER_TAG)-alpine \
 		.
 dsecretstore: docker_security_secretstore_setup
@@ -327,6 +343,7 @@ docker_security_secretstore_setup:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-secretstore-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-secretstore-setup:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -334,6 +351,7 @@ docker_security_secretstore_setup:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-secretstore-setup/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-secretstore-setup:$(DOCKER_TAG)-alpine \
 		.
 
@@ -344,6 +362,7 @@ docker_security_bootstrapper:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-bootstrapper:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -351,6 +370,7 @@ docker_security_bootstrapper:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-bootstrapper/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-bootstrapper:$(DOCKER_TAG)-alpine \
 		.
 
@@ -361,6 +381,7 @@ docker_security_spire_server:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-server/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-server:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -368,6 +389,7 @@ docker_security_spire_server:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-server/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-server:$(DOCKER_TAG)-alpine \
 		.
 
@@ -378,6 +400,7 @@ docker_security_spire_agent:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-agent/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-agent:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -385,6 +408,7 @@ docker_security_spire_agent:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-agent/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-agent:$(DOCKER_TAG)-alpine \
 		.
 
@@ -395,6 +419,7 @@ docker_security_spire_config:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-config/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-config:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -402,6 +427,7 @@ docker_security_spire_config:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spire-config/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spire-config:$(DOCKER_TAG)-alpine \
 		.
 
@@ -412,6 +438,7 @@ docker_security_spiffe_token_provider:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spiffe-token-provider/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spiffe-token-provider:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
@@ -419,6 +446,7 @@ docker_security_spiffe_token_provider:
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/security-spiffe-token-provider/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
+		--push \
 		-t magicletters/security-spiffe-token-provider:$(DOCKER_TAG)-alpine \
 		.
 

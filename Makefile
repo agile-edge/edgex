@@ -175,7 +175,6 @@ dmetadata: docker_core_metadata
 docker_core_metadata: 
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-metadata/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -183,7 +182,6 @@ docker_core_metadata:
 		-t magicletters/core-metadata:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-metadata/Dockerfile.alpine \
@@ -196,7 +194,6 @@ ddata: docker_core_data
 docker_core_data: 
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-data/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -204,7 +201,6 @@ docker_core_data:
 		-t magicletters/core-data:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-data/Dockerfile.alpine \
@@ -217,7 +213,6 @@ dcommand: docker_core_command
 docker_core_command:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-command/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -225,7 +220,6 @@ docker_core_command:
 		-t magicletters/core-command:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-command/Dockerfile.alpine \
@@ -238,7 +232,6 @@ dcommon-config: docker_core_common_config
 docker_core_common_config: 
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -246,7 +239,6 @@ docker_core_common_config:
 		-t magicletters/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile.alpine \
@@ -261,7 +253,6 @@ dnotifications: docker_support_notifications
 docker_support_notifications: 
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-notifications/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -269,7 +260,6 @@ docker_support_notifications:
 		-t magicletters/support-notifications:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-notifications/Dockerfile.alpine \
@@ -282,7 +272,6 @@ dscheduler: docker_support_scheduler
 docker_support_scheduler: 
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-scheduler/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
@@ -290,7 +279,6 @@ docker_support_scheduler:
 		-t magicletters/support-scheduler:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
-		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
 		-f cmd/support-scheduler/Dockerfile.alpine \

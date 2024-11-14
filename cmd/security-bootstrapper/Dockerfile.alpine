@@ -17,9 +17,11 @@
 #  SPDX-License-Identifier: Apache-2.0
 #  ----------------------------------------------------------------------------------
 
-FROM golang:1.21-bookworm AS builder
+FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
+
+RUN apk add --update --no-cache make git
 
 WORKDIR /edgex
 
@@ -33,15 +35,11 @@ COPY . .
 RUN make cmd/security-bootstrapper/security-bootstrapper
 
 #Next image - Copy built Go binary into new workspace
-FROM debian:bookworm-slim
+FROM alpine:3.20
 
-# 设置环境变量以避免交互式提示
-ENV DEBIAN_FRONTEND=noninteractive
+RUN apk add --update --no-cache dumb-init
 # Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apt update && \
-    apt upgrade -y && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache upgrade
 
 ENV SECURITY_INIT_DIR /edgex-init
 ENV SECURITY_INIT_STAGING /edgex-init-staging

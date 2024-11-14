@@ -26,13 +26,21 @@ ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
 
 COPY go.mod ./
-RUN go mod download
+RUN go mod download all
 
 COPY . .
 RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/security-proxy-auth/security-proxy-auth
 
 #Next image - Copy built Go binary into new workspace
 FROM debian:bookworm-slim
+
+# 设置环境变量以避免交互式提示
+ENV DEBIAN_FRONTEND=noninteractive
+# Ensure using latest versions of all installed packages to avoid any recent CVEs
+RUN apt update && \
+    apt upgrade -y && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/security.txt /

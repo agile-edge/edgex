@@ -16,9 +16,11 @@
 #  SPDX-License-Identifier: Apache-2.0
 #  ----------------------------------------------------------------------------------
 
-FROM golang:1.21-bookworm AS builder
+FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
+
+RUN apk add --update --no-cache make git
 
 WORKDIR /edgex
 
@@ -29,27 +31,23 @@ COPY go.mod ./
 RUN go mod download all
 
 COPY . .
-RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-common-config-bootstrapper/core-common-config-bootstrapper
+RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/security-proxy-auth/security-proxy-auth
 
 #Next image - Copy built Go binary into new workspace
-FROM debian:bookworm-slim
+FROM alpine:3.20
 
-# 设置环境变量以避免交互式提示
-ENV DEBIAN_FRONTEND=noninteractive
+RUN apk add --update --no-cache dumb-init
 # Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apt update && \
-    apt upgrade -y && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache upgrade
 
 COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/security.txt /
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/cmd/security-proxy-auth/security-proxy-auth /
+COPY --from=builder /edgex/cmd/security-proxy-auth/res/configuration.yaml /res/configuration.yaml
 
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
+COPY --from=builder /edgex/cmd/security-proxy-auth/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/core-common-config-bootstrapper", "-cp=consul.http://edgex-core-consul:8500"]
+CMD ["/security-proxy-auth", "-cp=consul.http://edgex-core-consul:8500"]

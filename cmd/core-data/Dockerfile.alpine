@@ -1,5 +1,7 @@
 #  ----------------------------------------------------------------------------------
-#  Copyright (c) 2023 Intel Corporation
+#  Copyright 2018 Dell Technologies, Inc.
+#  Copyright 2018 Cavium
+#  Copyright 2023 Intel Corp.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -12,13 +14,14 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-#
-#  SPDX-License-Identifier: Apache-2.0
+# 
 #  ----------------------------------------------------------------------------------
 
-FROM golang:1.21-bookworm AS builder
+FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
+
+RUN apk add --update --no-cache make git
 
 WORKDIR /edgex
 
@@ -29,27 +32,23 @@ COPY go.mod ./
 RUN go mod download all
 
 COPY . .
-RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-common-config-bootstrapper/core-common-config-bootstrapper
+RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-data/core-data
 
 #Next image - Copy built Go binary into new workspace
-FROM debian:bookworm-slim
+FROM alpine:3.20
 
-# 设置环境变量以避免交互式提示
-ENV DEBIAN_FRONTEND=noninteractive
+RUN apk add --update --no-cache dumb-init
 # Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apt update && \
-    apt upgrade -y && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache upgrade
+
+ENV APP_PORT=59880
+#expose core data port
+EXPOSE $APP_PORT
 
 COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/security.txt /
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/cmd/core-data/core-data /
+COPY --from=builder /edgex/cmd/core-data/res/configuration.yaml /res/configuration.yaml
 
-COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
-RUN chmod 755 /usr/local/bin/entrypoint.sh \
-    && ln -s /usr/local/bin/entrypoint.sh /
-
-ENTRYPOINT ["entrypoint.sh"]
-CMD ["/core-common-config-bootstrapper", "-cp=consul.http://edgex-core-consul:8500"]
+ENTRYPOINT ["/core-data"]
+CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]

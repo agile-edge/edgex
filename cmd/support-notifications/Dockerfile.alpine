@@ -20,15 +20,16 @@ FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 WORKDIR /edgex
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
 
-COPY go.mod ./
-RUN go mod download all
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/support-notifications/support-notifications
@@ -36,9 +37,9 @@ RUN make cmd/support-notifications/support-notifications
 #Next image - Copy built Go binary into new workspace
 FROM alpine:3.20
 
-RUN apk add --update --no-cache dumb-init
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init && \
+    apk --no-cache upgrade
 
 ENV APP_PORT=59860
 #expose support notifications port

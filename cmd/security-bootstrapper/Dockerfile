@@ -17,7 +17,7 @@
 #  SPDX-License-Identifier: Apache-2.0
 #  ----------------------------------------------------------------------------------
 
-FROM golang:1.21-bookworm AS builder
+FROM golang:1.23-bookworm AS builder
 
 ARG ADD_BUILD_TAGS=""
 
@@ -26,8 +26,8 @@ WORKDIR /edgex
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
 
-COPY go.mod ./
-RUN go mod download all
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/security-bootstrapper/security-bootstrapper
@@ -37,8 +37,8 @@ FROM debian:bookworm-slim
 
 # 设置环境变量以避免交互式提示
 ENV DEBIAN_FRONTEND=noninteractive
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apt update && \
+RUN sed -i 's|http://deb.debian.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apt/sources.list.d/debian.sources && \
+    apt update && \
     apt upgrade -y && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*

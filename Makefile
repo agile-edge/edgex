@@ -179,7 +179,7 @@ docker_core_metadata:
 		-f cmd/core-metadata/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-metadata:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-metadata:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -187,7 +187,7 @@ docker_core_metadata:
 		-f cmd/core-metadata/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-metadata:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-metadata:$(DOCKER_TAG)-alpine \
 		.
 
 ddata: docker_core_data
@@ -198,7 +198,7 @@ docker_core_data:
 		-f cmd/core-data/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-data:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-data:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -206,7 +206,7 @@ docker_core_data:
 		-f cmd/core-data/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-data:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-data:$(DOCKER_TAG)-alpine \
 		.
 
 dcommand: docker_core_command
@@ -217,7 +217,7 @@ docker_core_command:
 		-f cmd/core-command/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-command:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-command:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -225,7 +225,7 @@ docker_core_command:
 		-f cmd/core-command/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-command:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-command:$(DOCKER_TAG)-alpine \
 		.
 
 dcommon-config: docker_core_common_config
@@ -236,7 +236,7 @@ docker_core_common_config:
 		-f cmd/core-common-config-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-common-config-bootstrapper:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -244,7 +244,7 @@ docker_core_common_config:
 		-f cmd/core-common-config-bootstrapper/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/core-common-config-bootstrapper:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/core-common-config-bootstrapper:$(DOCKER_TAG)-alpine \
 		.
 
 dsupport: dnotifications dscheduler
@@ -257,7 +257,7 @@ docker_support_notifications:
 		-f cmd/support-notifications/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/support-notifications:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/support-notifications:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -265,7 +265,7 @@ docker_support_notifications:
 		-f cmd/support-notifications/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/support-notifications:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/support-notifications:$(DOCKER_TAG)-alpine \
 		.
 
 dscheduler: docker_support_scheduler
@@ -276,7 +276,7 @@ docker_support_scheduler:
 		-f cmd/support-scheduler/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/support-scheduler:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/support-scheduler:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -284,7 +284,7 @@ docker_support_scheduler:
 		-f cmd/support-scheduler/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/support-scheduler:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/support-scheduler:$(DOCKER_TAG)-alpine \
 		.
 
 dproxya: docker_security_proxy_auth
@@ -295,7 +295,7 @@ docker_security_proxy_auth:
 		-f cmd/security-proxy-auth/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-proxy-auth:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-auth:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -303,7 +303,7 @@ docker_security_proxy_auth:
 		-f cmd/security-proxy-auth/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-proxy-auth:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-auth:$(DOCKER_TAG)-alpine \
 		.
 
 dproxys: docker_security_proxy_setup
@@ -314,7 +314,7 @@ docker_security_proxy_setup:
 		-f cmd/security-proxy-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-proxy-setup:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-setup:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -322,7 +322,7 @@ docker_security_proxy_setup:
 		-f cmd/security-proxy-setup/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-proxy-setup:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-setup:$(DOCKER_TAG)-alpine \
 		.
 dsecretstore: docker_security_secretstore_setup
 docker_security_secretstore_setup: 
@@ -332,7 +332,7 @@ docker_security_secretstore_setup:
 		-f cmd/security-secretstore-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-secretstore-setup:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-secretstore-setup:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -340,7 +340,7 @@ docker_security_secretstore_setup:
 		-f cmd/security-secretstore-setup/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-secretstore-setup:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-secretstore-setup:$(DOCKER_TAG)-alpine \
 		.
 
 dbootstrapper: docker_security_bootstrapper
@@ -351,7 +351,7 @@ docker_security_bootstrapper:
 		-f cmd/security-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-bootstrapper:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-bootstrapper:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -359,7 +359,7 @@ docker_security_bootstrapper:
 		-f cmd/security-bootstrapper/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-bootstrapper:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-bootstrapper:$(DOCKER_TAG)-alpine \
 		.
 
 dspires: docker_security_spire_server
@@ -370,7 +370,7 @@ docker_security_spire_server:
 		-f cmd/security-spire-server/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-server:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-server:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -378,7 +378,7 @@ docker_security_spire_server:
 		-f cmd/security-spire-server/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-server:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-server:$(DOCKER_TAG)-alpine \
 		.
 
 dspirea: docker_security_spire_agent
@@ -389,7 +389,7 @@ docker_security_spire_agent:
 		-f cmd/security-spire-agent/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-agent:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-agent:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -397,7 +397,7 @@ docker_security_spire_agent:
 		-f cmd/security-spire-agent/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-agent:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-agent:$(DOCKER_TAG)-alpine \
 		.
 
 dspirec: docker_security_spire_config
@@ -408,7 +408,7 @@ docker_security_spire_config:
 		-f cmd/security-spire-config/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-config:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-config:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -416,7 +416,7 @@ docker_security_spire_config:
 		-f cmd/security-spire-config/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spire-config:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-config:$(DOCKER_TAG)-alpine \
 		.
 
 dspiffetp: docker_security_spiffe_token_provider
@@ -427,7 +427,7 @@ docker_security_spiffe_token_provider:
 		-f cmd/security-spiffe-token-provider/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spiffe-token-provider:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spiffe-token-provider:$(DOCKER_TAG) \
 		.
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -435,7 +435,7 @@ docker_security_spiffe_token_provider:
 		-f cmd/security-spiffe-token-provider/Dockerfile.alpine \
 		--label "git_sha=$(GIT_SHA)" \
 		--push \
-		-t magicletters/security-spiffe-token-provider:$(DOCKER_TAG)-alpine \
+		-t ccr.ccs.tencentyun.com/agile-edgex/security-spiffe-token-provider:$(DOCKER_TAG)-alpine \
 		.
 
 sbom:

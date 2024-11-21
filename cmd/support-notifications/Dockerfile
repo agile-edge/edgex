@@ -25,8 +25,8 @@ WORKDIR /edgex
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
 
-COPY go.* ./
-RUN go mod download
+COPY go.mod ./
+RUN go mod download all
 
 COPY . .
 RUN make cmd/support-notifications/support-notifications

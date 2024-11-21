@@ -25,8 +25,8 @@ WORKDIR /edgex
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
 
-COPY go.* ./
-RUN go mod download
+COPY go.mod ./
+RUN go mod download all
 
 COPY . .
 RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/security-proxy-auth/security-proxy-auth

@@ -33,6 +33,22 @@ DOCKERS= \
 	docker_security_spire_config \
 	docker_security_spiffe_token_provider
 
+DEBIAN_DOCKERS= \
+	docker_core_metadata \
+	docker_core_data \
+	docker_core_command \
+	docker_core_common_config \
+	docker_support_notifications \
+	docker_support_scheduler
+
+ALPINE_DOCKERS= \
+	docker_core_metadata_alpine \
+	docker_core_data_alpine \
+	docker_core_command_alpine \
+	docker_core_common_config_alpine \
+	docker_support_notifications_alpine \
+	docker_support_scheduler_alpine
+
 .PHONY: $(DOCKERS)
 
 MICROSERVICES= \
@@ -164,15 +180,10 @@ test: unittest hadolint lint
 
 docker-all: $(DOCKERS)
 
-docker: dcore dcommon-config dsupport
+docker-alpine: $(ALPINE_DOCKERS)
+docker: $(DEBIAN_DOCKERS)
 
-docker-nats:
-	make -e ADD_BUILD_TAGS=include_nats_messaging docker
-
-dcore: dmetadata ddata dcommand
-
-dmetadata: docker_core_metadata
-docker_core_metadata: 
+docker_core_metadata:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -181,6 +192,7 @@ docker_core_metadata:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-metadata:$(DOCKER_TAG) \
 		.
+docker_core_metadata_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -190,8 +202,7 @@ docker_core_metadata:
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-metadata:$(DOCKER_TAG)-alpine \
 		.
 
-ddata: docker_core_data
-docker_core_data: 
+docker_core_data:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -200,6 +211,7 @@ docker_core_data:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-data:$(DOCKER_TAG) \
 		.
+docker_core_data_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -209,7 +221,6 @@ docker_core_data:
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-data:$(DOCKER_TAG)-alpine \
 		.
 
-dcommand: docker_core_command
 docker_core_command:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
@@ -219,6 +230,7 @@ docker_core_command:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-command:$(DOCKER_TAG) \
 		.
+docker_core_command_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -228,8 +240,7 @@ docker_core_command:
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-command:$(DOCKER_TAG)-alpine \
 		.
 
-dcommon-config: docker_core_common_config
-docker_core_common_config: 
+docker_core_common_config:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -238,6 +249,7 @@ docker_core_common_config:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
+docker_core_common_config_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -247,10 +259,7 @@ docker_core_common_config:
 		-t ccr.ccs.tencentyun.com/agile-edgex/core-common-config-bootstrapper:$(DOCKER_TAG)-alpine \
 		.
 
-dsupport: dnotifications dscheduler
-
-dnotifications: docker_support_notifications
-docker_support_notifications: 
+docker_support_notifications:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -259,6 +268,7 @@ docker_support_notifications:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/support-notifications:$(DOCKER_TAG) \
 		.
+docker_support_notifications_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -268,8 +278,7 @@ docker_support_notifications:
 		-t ccr.ccs.tencentyun.com/agile-edgex/support-notifications:$(DOCKER_TAG)-alpine \
 		.
 
-dscheduler: docker_support_scheduler
-docker_support_scheduler: 
+docker_support_scheduler:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -278,6 +287,7 @@ docker_support_scheduler:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/support-scheduler:$(DOCKER_TAG) \
 		.
+docker_support_scheduler_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -297,6 +307,7 @@ docker_security_proxy_auth:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-auth:$(DOCKER_TAG) \
 		.
+docker_security_proxy_auth_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -316,6 +327,7 @@ docker_security_proxy_setup:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-proxy-setup:$(DOCKER_TAG) \
 		.
+docker_security_proxy_setup_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -334,6 +346,7 @@ docker_security_secretstore_setup:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-secretstore-setup:$(DOCKER_TAG) \
 		.
+docker_security_secretstore_setup_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -353,6 +366,7 @@ docker_security_bootstrapper:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-bootstrapper:$(DOCKER_TAG) \
 		.
+docker_security_bootstrapper_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -372,6 +386,7 @@ docker_security_spire_server:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-server:$(DOCKER_TAG) \
 		.
+docker_security_spire_server_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -391,6 +406,7 @@ docker_security_spire_agent:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-agent:$(DOCKER_TAG) \
 		.
+docker_security_spire_agent_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -410,6 +426,7 @@ docker_security_spire_config:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-spire-config:$(DOCKER_TAG) \
 		.
+docker_security_spire_config_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \
@@ -429,6 +446,7 @@ docker_security_spiffe_token_provider:
 		--push \
 		-t ccr.ccs.tencentyun.com/agile-edgex/security-spiffe-token-provider:$(DOCKER_TAG) \
 		.
+docker_security_spiffe_token_provider_alpine:
 	docker buildx build --platform $(PLATFORM) \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
 		--build-arg GO_PROXY=$(GO_PROXY) \

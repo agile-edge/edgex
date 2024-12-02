@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"strings"
 
-	bootstrapper "github.com/agile-edgex/edgex/internal/security/bootstrapper/command"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/interfaces"
+	bootstrapper "github.com/agile-edge/edgex/internal/security/bootstrapper/command"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

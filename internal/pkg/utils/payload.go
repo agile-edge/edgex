@@ -8,7 +8,7 @@ package utils
 import (
 	"fmt"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
 )
 
 func CheckPayloadSize(payload []byte, sizeLimit int64) errors.EdgeX {

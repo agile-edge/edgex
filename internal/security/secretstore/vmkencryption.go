@@ -16,10 +16,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/agile-edgex/edgex/internal/security/kdf"
-	"github.com/agile-edgex/edgex/internal/security/pipedhexreader"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edge/edgex/internal/security/kdf"
+	"github.com/agile-edge/edgex/internal/security/pipedhexreader"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/types"
 )
 
 /*

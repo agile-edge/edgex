@@ -17,11 +17,12 @@ package pkg
 
 import (
 	"encoding/json"
-	"gopkg.in/yaml.v3"
 	"net/http"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"gopkg.in/yaml.v3"
+
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 
 	"github.com/labstack/echo/v4"
 )

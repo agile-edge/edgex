@@ -7,13 +7,13 @@
 package command
 
 import (
-	"github.com/agile-edgex/edgex"
-	commandController "github.com/agile-edgex/edgex/internal/core/command/controller/http"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/controller"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/handlers"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/edgex"
+	commandController "github.com/agile-edge/edgex/internal/core/command/controller/http"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/controller"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 
 	"github.com/labstack/echo/v4"
 )

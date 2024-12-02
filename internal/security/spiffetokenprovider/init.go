@@ -30,28 +30,28 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/environment"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/environment"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/secret"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 	"github.com/spiffe/go-spiffe/v2/spiffeid"
 	"github.com/spiffe/go-spiffe/v2/spiffetls/tlsconfig"
 	"github.com/spiffe/go-spiffe/v2/workloadapi"
 
-	"github.com/agile-edgex/edgex/internal"
-	"github.com/agile-edgex/edgex/internal/security/spiffetokenprovider/container"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/edgex/internal"
+	"github.com/agile-edge/edgex/internal/security/spiffetokenprovider/container"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/authtokenloader"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
-	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/authtokenloader"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v3/secrets"
 )
 
 const (
@@ -211,7 +211,7 @@ func (b *Bootstrap) BootstrapHandler(ctx context.Context, _ *sync.WaitGroup, _ s
 
 		lc.Debug("verifying SVID format and server key...")
 
-		// verify the prefix with what we expect like spiffe://agile-edgex.org/service/*
+		// verify the prefix with what we expect like spiffe://agile-edge.org/service/*
 		regex := regexp.MustCompile(`^spiffe://([^/]+)/service/(.*)$`)
 		if !regex.MatchString(peerSVID) {
 			lc.Error("Invalid Spiffe SVID format")

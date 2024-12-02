@@ -18,7 +18,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex/internal/support/scheduler"
+	"github.com/agile-edge/edgex/internal/support/scheduler"
 
 	"github.com/labstack/echo/v4"
 )

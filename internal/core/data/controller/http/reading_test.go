@@ -8,17 +8,17 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/edgex/internal/core/data/container"
-	dbMock "github.com/agile-edgex/edgex/internal/core/data/infrastructure/interfaces/mocks"
-	"github.com/agile-edgex/edgex/internal/core/data/mocks"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
-	responseDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
+	"github.com/agile-edge/edgex/internal/core/data/container"
+	dbMock "github.com/agile-edge/edgex/internal/core/data/infrastructure/interfaces/mocks"
+	"github.com/agile-edge/edgex/internal/core/data/mocks"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	commonDTO "github.com/agile-edge/go-mod-core-contracts/v3/dtos/common"
+	responseDTO "github.com/agile-edge/go-mod-core-contracts/v3/dtos/responses"
+	"github.com/agile-edge/go-mod-core-contracts/v3/models"
 
 	"github.com/labstack/echo/v4"
 )

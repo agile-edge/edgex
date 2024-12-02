@@ -10,17 +10,17 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/agile-edgex/edgex/internal/pkg"
-	"github.com/agile-edgex/edgex/internal/pkg/utils"
-	"github.com/agile-edgex/edgex/internal/support/notifications/application"
-	notificationContainer "github.com/agile-edgex/edgex/internal/support/notifications/container"
+	"github.com/agile-edge/edgex/internal/pkg"
+	"github.com/agile-edge/edgex/internal/pkg/utils"
+	"github.com/agile-edge/edgex/internal/support/notifications/application"
+	notificationContainer "github.com/agile-edge/edgex/internal/support/notifications/container"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
-	responseDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/responses"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	commonDTO "github.com/agile-edge/go-mod-core-contracts/v3/dtos/common"
+	responseDTO "github.com/agile-edge/go-mod-core-contracts/v3/dtos/responses"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
 
 	"github.com/labstack/echo/v4"
 )

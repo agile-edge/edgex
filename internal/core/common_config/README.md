@@ -10,8 +10,8 @@ To fetch the code and build the microservice execute the following:
 
 ```
 cd $GOPATH/src
-go get github.com/agile-edgex/edgex
-cd $GOPATH/src/github.com/agile-edgex/edgex
+go get github.com/agile-edge/edgex
+cd $GOPATH/src/github.com/agile-edge/edgex
 # pull the 3rd party / vendor packages
 make prepare
 # build the microservice
@@ -32,8 +32,8 @@ See https://docs.docker.com/install/ to learn how to obtain and install Docker.
 
 ```
 cd $GOPATH/src
-go get github.com/agile-edgex/edgex
-cd $GOPATH/src/github.com/agile-edgex/edgex
+go get github.com/agile-edge/edgex
+cd $GOPATH/src/github.com/agile-edge/edgex
 # To create the Docker image
 sudo make docker_core_common_config
 # To create a containter from the image
@@ -46,8 +46,8 @@ sudo docker start [DOCKER_CONTAINER_NAME]
  
 
 ## Community
-- Chat: [https://agile-edgex.slack.com](https://join.slack.com/t/agile-edgex/shared_invite/enQtNDgyODM5ODUyODY0LWVhY2VmOTcyOWY2NjZhOWJjOGI1YzQ2NzYzZmIxYzAzN2IzYzY0NTVmMWZhZjNkMjVmODNiZGZmYTkzZDE3MTA)
-- Mailing lists: https://lists.agile-edgex.org/mailman/listinfo
+- Chat: [https://agile-edge.slack.com](https://join.slack.com/t/agile-edge/shared_invite/enQtNDgyODM5ODUyODY0LWVhY2VmOTcyOWY2NjZhOWJjOGI1YzQ2NzYzZmIxYzAzN2IzYzY0NTVmMWZhZjNkMjVmODNiZGZmYTkzZDE3MTA)
+- Mailing lists: https://lists.agile-edge.org/mailman/listinfo
 
 ## License
 [Apache-2.0](LICENSE)

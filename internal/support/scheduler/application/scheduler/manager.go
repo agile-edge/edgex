@@ -9,19 +9,19 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex/internal/pkg/utils"
-	"github.com/agile-edgex/edgex/internal/support/scheduler/config"
-	"github.com/agile-edgex/edgex/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edge/edgex/internal/pkg/utils"
+	"github.com/agile-edge/edgex/internal/support/scheduler/config"
+	"github.com/agile-edge/edgex/internal/support/scheduler/infrastructure/interfaces"
 
-	bootstrapInterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
+	bootstrapInterfaces "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/secret"
 
-	clientInterfaces "github.com/agile-edgex/go-mod-core-contracts/v3/clients/interfaces"
+	clientInterfaces "github.com/agile-edge/go-mod-core-contracts/v3/clients/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/models"
 
 	"gopkg.in/eapache/queue.v1"
 )

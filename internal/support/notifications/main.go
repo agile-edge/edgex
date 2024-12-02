@@ -26,20 +26,20 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	"github.com/agile-edge/go-mod-bootstrap/v3/config"
 
-	"github.com/agile-edgex/edgex"
-	pkgHandlers "github.com/agile-edgex/edgex/internal/pkg/bootstrap/handlers"
-	notificationsConfig "github.com/agile-edgex/edgex/internal/support/notifications/config"
-	"github.com/agile-edgex/edgex/internal/support/notifications/container"
+	"github.com/agile-edge/edgex"
+	pkgHandlers "github.com/agile-edge/edgex/internal/pkg/bootstrap/handlers"
+	notificationsConfig "github.com/agile-edge/edgex/internal/support/notifications/config"
+	"github.com/agile-edge/edgex/internal/support/notifications/container"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/handlers"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/flags"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 
 	"github.com/labstack/echo/v4"
 )

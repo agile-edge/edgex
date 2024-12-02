@@ -21,18 +21,18 @@ import (
 	"fmt"
 	"time"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/models"
 
-	"github.com/agile-edgex/edgex/internal/core/metadata/container"
-	"github.com/agile-edgex/edgex/internal/core/metadata/infrastructure/interfaces"
-	"github.com/agile-edgex/edgex/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex/internal/pkg/utils"
+	"github.com/agile-edge/edgex/internal/core/metadata/container"
+	"github.com/agile-edge/edgex/internal/core/metadata/infrastructure/interfaces"
+	"github.com/agile-edge/edgex/internal/pkg/correlation"
+	"github.com/agile-edge/edgex/internal/pkg/utils"
 )
 
 // the suggested minimum duration for auto event interval

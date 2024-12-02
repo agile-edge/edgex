@@ -27,10 +27,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

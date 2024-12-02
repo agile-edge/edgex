@@ -9,7 +9,7 @@ package mocks
 import (
 	"testing"
 
-	. "github.com/agile-edgex/edgex/internal/security/kdf"
+	. "github.com/agile-edge/edgex/internal/security/kdf"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
-	dto "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
+	dto "github.com/agile-edge/go-mod-core-contracts/v3/dtos/requests"
 
 	"github.com/fxamacker/cbor/v2"
 	"github.com/stretchr/testify/assert"

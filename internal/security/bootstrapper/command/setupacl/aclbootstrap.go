@@ -24,8 +24,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/types"
 )
 
 // generateBootStrapACLToken should only be called once per Consul agent

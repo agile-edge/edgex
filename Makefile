@@ -71,7 +71,7 @@ VERSION=$(shell (git branch --show-current | sed 's/^release\///' | sed 's/^v//'
 #DOCKER_TAG=$(VERSION)-$(shell git log -1 --format=%h)
 DOCKER_TAG=$(VERSION)
 
-GOFLAGS=-ldflags "-X github.com/agile-edgex/edgex.Version=$(VERSION)" -trimpath -mod=readonly
+GOFLAGS=-ldflags "-X github.com/agile-edge/edgex.Version=$(VERSION)" -trimpath -mod=readonly
 GOTESTFLAGS?=-race
 
 GIT_SHA=$(shell git rev-parse HEAD)

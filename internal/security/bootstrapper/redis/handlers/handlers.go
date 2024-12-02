@@ -24,15 +24,15 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/helper"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/redis/container"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/helper"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/redis/container"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

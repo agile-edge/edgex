@@ -24,12 +24,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/agile-edgex/edgex/internal/security/secretstore/secretsengine"
-	"github.com/agile-edgex/edgex/internal/security/secretstore/tokencreatable"
+	"github.com/agile-edge/edgex/internal/security/secretstore/secretsengine"
+	"github.com/agile-edge/edgex/internal/security/secretstore/tokencreatable"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
-	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v3/secrets"
 )
 
 const (
@@ -165,7 +165,7 @@ path "` + secretsengine.ConsulSecretEngineMountPoint + `/roles/*" {
 func getFunctionName(f interface{}) string {
 	createTokenFuncName := runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name()
 	// On runtime, this will get us something like:
-	// github.com/agile-edgex/edgex/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
+	// github.com/agile-edge/edgex/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	// but we only want to get the last part of string after last "/",
 	// i.e. secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	elementName := strings.Split(createTokenFuncName, "/")

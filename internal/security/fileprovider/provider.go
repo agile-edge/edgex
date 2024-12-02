@@ -23,17 +23,17 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/agile-edgex/edgex/internal/security/common"
-	securityCommon "github.com/agile-edgex/edgex/internal/security/common"
-	"github.com/agile-edgex/edgex/internal/security/fileprovider/config"
-	"github.com/agile-edgex/edgex/internal/security/secretstore"
-	secretstoreConfig "github.com/agile-edgex/edgex/internal/security/secretstore/config"
-	"github.com/agile-edgex/go-mod-secrets/v3/secrets"
+	"github.com/agile-edge/edgex/internal/security/common"
+	securityCommon "github.com/agile-edge/edgex/internal/security/common"
+	"github.com/agile-edge/edgex/internal/security/fileprovider/config"
+	"github.com/agile-edge/edgex/internal/security/secretstore"
+	secretstoreConfig "github.com/agile-edge/edgex/internal/security/secretstore/config"
+	"github.com/agile-edge/go-mod-secrets/v3/secrets"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/authtokenloader"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/authtokenloader"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer"
 )
 
 // permissionable is the subset of the File API that allows setting file permissions

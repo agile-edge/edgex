@@ -21,12 +21,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex/internal/core/data/application"
-	"github.com/agile-edgex/edgex/internal/core/data/container"
-	"github.com/agile-edgex/edgex/internal/core/data/controller/messaging"
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/edgex/internal/core/data/application"
+	"github.com/agile-edge/edgex/internal/core/data/container"
+	"github.com/agile-edge/edgex/internal/core/data/controller/messaging"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 
 	"github.com/labstack/echo/v4"
 )

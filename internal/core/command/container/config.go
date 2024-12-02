@@ -15,9 +15,9 @@
 package container
 
 import (
-	"github.com/agile-edgex/edgex/internal/core/command/config"
+	"github.com/agile-edge/edgex/internal/core/command/config"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 // ConfigurationName contains the name of command's config.ConfigurationStruct implementation in the DIC.

@@ -14,13 +14,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/agile-edgex/edgex/internal/pkg"
-	"github.com/agile-edgex/edgex/internal/pkg/correlation"
+	"github.com/agile-edge/edgex/internal/pkg"
+	"github.com/agile-edge/edgex/internal/pkg/correlation"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	commonDTO "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	commonDTO "github.com/agile-edge/go-mod-core-contracts/v3/dtos/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
 
 	"github.com/labstack/echo/v4"
 )

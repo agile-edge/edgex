@@ -18,7 +18,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex/internal/security/spiffetokenprovider"
+	"github.com/agile-edge/edgex/internal/security/spiffetokenprovider"
 )
 
 func main() {

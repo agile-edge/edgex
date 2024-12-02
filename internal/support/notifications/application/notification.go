@@ -11,14 +11,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/edgex/internal/pkg/correlation"
-	"github.com/agile-edgex/edgex/internal/support/notifications/container"
+	"github.com/agile-edge/edgex/internal/pkg/correlation"
+	"github.com/agile-edge/edgex/internal/support/notifications/container"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/models"
 
 	"github.com/google/uuid"
 )

@@ -17,7 +17,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex/internal/security/proxyauth"
+	"github.com/agile-edge/edgex/internal/security/proxyauth"
 
 	"github.com/labstack/echo/v4"
 )

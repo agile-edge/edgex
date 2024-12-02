@@ -28,7 +28,7 @@ The binary supports multiple command line parameters
 
 An example of using the parameters can be found in the following docker compose
 file:
-[https://github.com/agile-edgex/developer-scripts/blob/master/releases/fuji/compose-files/docker-compose-fuji.yml](https://github.com/agile-edgex/developer-scripts/blob/master/releases/fuji/compose-files/docker-compose-fuji.yml)
+[https://github.com/agile-edge/developer-scripts/blob/master/releases/fuji/compose-files/docker-compose-fuji.yml](https://github.com/agile-edge/developer-scripts/blob/master/releases/fuji/compose-files/docker-compose-fuji.yml)
 
 ## Docker Build
 
@@ -38,7 +38,7 @@ Go to the root directory of the repository and use the Makefile to build the doc
 make docker_security_secretstore_setup
 ```
 
-It should create a docker image with the name `agile-edgex/docker_security_secretstore_setup:<version>-dev` if sucessfully built.
+It should create a docker image with the name `agile-edge/docker_security_secretstore_setup:<version>-dev` if sucessfully built.
 
 ## Debugging Tips
 

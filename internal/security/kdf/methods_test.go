@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
 
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

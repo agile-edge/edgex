@@ -19,10 +19,10 @@ package mocks
 import (
 	"testing"
 
-	. "github.com/agile-edgex/edgex/internal/security/fileprovider"
-	"github.com/agile-edgex/edgex/internal/security/fileprovider/config"
+	. "github.com/agile-edge/edgex/internal/security/fileprovider"
+	"github.com/agile-edge/edgex/internal/security/fileprovider/config"
 
-	secretStoreConfig "github.com/agile-edgex/edgex/internal/security/secretstore/config"
+	secretStoreConfig "github.com/agile-edge/edgex/internal/security/secretstore/config"
 
 	"github.com/stretchr/testify/assert"
 )

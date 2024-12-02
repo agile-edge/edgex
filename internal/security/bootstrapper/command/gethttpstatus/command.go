@@ -25,12 +25,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/agile-edgex/edgex/internal"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/config"
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/interfaces"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg"
+	"github.com/agile-edge/edgex/internal"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/config"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 )
 
 const (

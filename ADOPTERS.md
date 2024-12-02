@@ -1,6 +1,6 @@
 # EdgeX Foundry Adopters
 
-For a list of the latest EdgeX users, see our [EdgeX Users](https://www.agile-edgex.org/ecosystem/users/) page on the EdgeX web site.
+For a list of the latest EdgeX users, see our [EdgeX Users](https://www.agile-edge.org/ecosystem/users/) page on the EdgeX web site.
 
 | Organization and Web Site | EdgeX Ready Badged |
 | :--- | :--- |
@@ -21,4 +21,4 @@ For a list of the latest EdgeX users, see our [EdgeX Users](https://www.agile-ed
 |[Wipro](http://www.wipro.com)||
 |[Zededa](http://www.zededa.com)||
 
-EdgeX adopters regularly present in our Adopter Series.  Find EdgeX Adopter Series presentations on our [web site](https://www.agile-edgex.org/ecosystem/adopter-series/) and [Wiki](https://wiki.agile-edgex.org/display/FA/Vertical+Solutions+Working+Group#VerticalSolutionsWorkingGroup-UpcomingAdopterSeriesTalks).
+EdgeX adopters regularly present in our Adopter Series.  Find EdgeX Adopter Series presentations on our [web site](https://www.agile-edge.org/ecosystem/adopter-series/) and [Wiki](https://wiki.agile-edge.org/display/FA/Vertical+Solutions+Working+Group#VerticalSolutionsWorkingGroup-UpcomingAdopterSeriesTalks).

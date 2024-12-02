@@ -22,7 +22,7 @@ package main
 import (
 	"context"
 
-	"github.com/agile-edgex/edgex/internal/security/secretstore"
+	"github.com/agile-edge/edgex/internal/security/secretstore"
 )
 
 func main() {

@@ -15,7 +15,8 @@ package main
 
 import (
 	"context"
-	"github.com/agile-edgex/edgex/internal/core/common_config"
+
+	"github.com/agile-edge/edgex/internal/core/common_config"
 )
 
 func main() {

@@ -8,8 +8,8 @@ package scheduler
 import (
 	"fmt"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/models"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v3/models"
 )
 
 func (m *manager) addIntervalAction(e *Executor, action models.IntervalAction) {

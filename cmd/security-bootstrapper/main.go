@@ -18,7 +18,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper"
 )
 
 func main() {

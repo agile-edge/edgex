@@ -19,16 +19,16 @@ import (
 	"context"
 	"os"
 
-	"github.com/agile-edgex/edgex/internal/security/spiffetokenprovider/config"
-	"github.com/agile-edgex/edgex/internal/security/spiffetokenprovider/container"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/edgex/internal/security/spiffetokenprovider/config"
+	"github.com/agile-edge/edgex/internal/security/spiffetokenprovider/container"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/flags"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/flags"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 func Main(ctx context.Context, cancel context.CancelFunc) {

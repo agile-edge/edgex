@@ -785,7 +785,7 @@ components:
           description: "A field that can contain a free-form message, such as an error message."
           type: string        
     ConfigResponse:
-      description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.agile-edgex.org)."
+      description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.agile-edge.org)."
       type: object
       properties:
         apiVersion:

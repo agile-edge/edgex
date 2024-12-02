@@ -20,14 +20,14 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/config"
-	messagebus "github.com/agile-edgex/edgex/internal/security/bootstrapper/mosquitto/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces/mocks"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/messaging"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/edgex/internal/security/bootstrapper/mosquitto/config"
+	messagebus "github.com/agile-edge/edgex/internal/security/bootstrapper/mosquitto/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces/mocks"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/messaging"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 )
 
 type Testdata struct {

@@ -4,13 +4,13 @@
 # To privately report a security vulnerability in EdgeX Foundry
 # in the upstream open source repository hosted on github.com.
 
-Contact: mailto:security-issues@lists.agile-edgex.org
+Contact: mailto:security-issues@lists.agile-edge.org
 
 Preferred-Languages: en
 
-Canonical: https://github.com/agile-edgex/edgex/blob/main/security.txt
+Canonical: https://github.com/agile-edge/edgex/blob/main/security.txt
 
-Policy: https://wiki.agile-edgex.org/display/FA/Security
+Policy: https://wiki.agile-edge.org/display/FA/Security
 
 Expires: 2024-06-30T00:00:00.000Z
 

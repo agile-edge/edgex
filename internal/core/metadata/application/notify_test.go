@@ -13,22 +13,22 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/agile-edgex/edgex/internal/core/metadata/config"
-	"github.com/agile-edgex/edgex/internal/core/metadata/container"
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
-	mocks2 "github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger/mocks"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/errors"
-	"github.com/agile-edgex/go-mod-messaging/v3/messaging/mocks"
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edge/edgex/internal/core/metadata/config"
+	"github.com/agile-edge/edgex/internal/core/metadata/container"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
+	mocks2 "github.com/agile-edge/go-mod-core-contracts/v3/clients/logger/mocks"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/errors"
+	"github.com/agile-edge/go-mod-messaging/v3/messaging/mocks"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 func TestPublishSystemEvent(t *testing.T) {

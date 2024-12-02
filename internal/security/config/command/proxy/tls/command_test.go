@@ -11,10 +11,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/agile-edgex/edgex/internal/security/config/interfaces"
+	"github.com/agile-edge/edgex/internal/security/config/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v3/pkg/token/fileioperformer/mocks"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

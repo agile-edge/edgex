@@ -13,11 +13,11 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/agile-edgex/edgex/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex/internal/security/secretstore/config"
 )
 
 func TestInvalidPasswordProvider(t *testing.T) {

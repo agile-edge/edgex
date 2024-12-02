@@ -6,7 +6,7 @@
 package channel
 
 import (
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 // RESTSenderName contains the name of the channel.RESTSender implementation in the DIC.

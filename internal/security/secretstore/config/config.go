@@ -19,7 +19,7 @@ package config
 import (
 	"fmt"
 
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
 )
 
 type ConfigurationStruct struct {

@@ -1,11 +1,11 @@
 # EdgeX Foundry Services
-[![Build Status](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex/job/main/badge/icon)](https://jenkins.agile-edgex.org/view/EdgeX%20Foundry%20Project/job/agile-edgex/job/edgex/job/main/) [![Code Coverage](https://codecov.io/gh/agile-edgex/edgex/branch/main/graph/badge.svg?token=Y3mpessZqk)](https://codecov.io/gh/agile-edgex/edgex) [![Go Report Card](https://goreportcard.com/badge/github.com/agile-edgex/edgex)](https://goreportcard.com/report/github.com/agile-edgex/edgex) [![GitHub Latest Dev Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex?include_prereleases&sort=semver&label=latest-dev)](https://github.com/agile-edgex/edgex/tags) ![GitHub Latest Stable Tag)](https://img.shields.io/github/v/tag/agile-edgex/edgex?sort=semver&label=latest-stable) [![GitHub License](https://img.shields.io/github/license/agile-edgex/edgex)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/agile-edgex/edgex) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/pulls) [![GitHub Contributors](https://img.shields.io/github/contributors/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/contributors) [![GitHub Committers](https://img.shields.io/badge/team-committers-green)](https://github.com/orgs/agile-edgex/teams/edgex-committers/members) [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/agile-edgex/edgex)](https://github.com/agile-edgex/edgex/commits)
+[![Build Status](https://jenkins.agile-edge.org/view/EdgeX%20Foundry%20Project/job/agile-edge/job/edgex/job/main/badge/icon)](https://jenkins.agile-edge.org/view/EdgeX%20Foundry%20Project/job/agile-edge/job/edgex/job/main/) [![Code Coverage](https://codecov.io/gh/agile-edge/edgex/branch/main/graph/badge.svg?token=Y3mpessZqk)](https://codecov.io/gh/agile-edge/edgex) [![Go Report Card](https://goreportcard.com/badge/github.com/agile-edge/edgex)](https://goreportcard.com/report/github.com/agile-edge/edgex) [![GitHub Latest Dev Tag)](https://img.shields.io/github/v/tag/agile-edge/edgex?include_prereleases&sort=semver&label=latest-dev)](https://github.com/agile-edge/edgex/tags) ![GitHub Latest Stable Tag)](https://img.shields.io/github/v/tag/agile-edge/edgex?sort=semver&label=latest-stable) [![GitHub License](https://img.shields.io/github/license/agile-edge/edgex)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/agile-edge/edgex) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/agile-edge/edgex)](https://github.com/agile-edge/edgex/pulls) [![GitHub Contributors](https://img.shields.io/github/contributors/agile-edge/edgex)](https://github.com/agile-edge/edgex/contributors) [![GitHub Committers](https://img.shields.io/badge/team-committers-green)](https://github.com/orgs/agile-edge/teams/edgex-committers/members) [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/agile-edge/edgex)](https://github.com/agile-edge/edgex/commits)
 
 > **Warning**  
 > The **main** branch of this repository contains work-in-progress development code for the upcoming release, and is **not guaranteed to be stable or working**.
-> It is only compatible with the [main branch of edgex-compose](https://github.com/agile-edgex/edgex-compose) which uses the Docker images built from the **main** branch of this repo and other repos.
+> It is only compatible with the [main branch of edgex-compose](https://github.com/agile-edge/edgex-compose) which uses the Docker images built from the **main** branch of this repo and other repos.
 >
-> **The source for the latest release can be found at [Releases](https://github.com/agile-edgex/edgex/releases).**
+> **The source for the latest release can be found at [Releases](https://github.com/agile-edge/edgex/releases).**
 
 EdgeX Foundry is a vendor-neutral open source project hosted by The Linux Foundation building a common open framework for IoT edge computing.  At the heart of the project is an interoperability framework hosted within a full hardware- and OS-agnostic reference software platform to enable an ecosystem of plug-and-play components that unifies the marketplace and accelerates the deployment of IoT solutions.  This repository contains the Go implementation of EdgeX Foundry microservices.  It also includes files for building the services, containerizing the services, and initializing (bootstrapping) the services.
 
@@ -20,24 +20,24 @@ make docker-nats
 ```
 
 The locally built Docker images can then be used in place of the published Docker images in your compose file.
-See [Compose Builder](https://github.com/agile-edgex/edgex-compose/tree/main/compose-builder#gen) `nat-bus` option to generate compose file for NATS and local dev images.
+See [Compose Builder](https://github.com/agile-edge/edgex-compose/tree/main/compose-builder#gen) `nat-bus` option to generate compose file for NATS and local dev images.
 
 ## Get Started
 
-EdgeX provides docker images in our organization's [DockerHub page](https://hub.docker.com/u/agile-edgex/).
+EdgeX provides docker images in our organization's [DockerHub page](https://hub.docker.com/u/agile-edge/).
 They can be launched easily with **docker-compose**.
 
 The simplest way to get started is to fetch the latest docker-compose.yml and start the EdgeX containers:
 
 ```sh
 release="main" # or "jakarta" for latest
-wget https://raw.githubusercontent.com/agile-edgex/edgex-compose/${release}/docker-compose.yml
+wget https://raw.githubusercontent.com/agile-edge/edgex-compose/${release}/docker-compose.yml
 docker-compose up -d
 ```
 
 You can check the status of your running EdgeX services by going to http://localhost:8500/
 
-Now that you have EdgeX up and running, you can follow our [API Walkthrough](https://docs.agile-edgex.org/2.1/walk-through/Ch-Walkthrough/) to learn how the different services work together to connect IoT devices to cloud services.
+Now that you have EdgeX up and running, you can follow our [API Walkthrough](https://docs.agile-edge.org/2.1/walk-through/Ch-Walkthrough/) to learn how the different services work together to connect IoT devices to cloud services.
 
 ## Running EdgeX with security components
 
@@ -74,7 +74,7 @@ GO111MODULE envrionment variables nor is there a requirement to root all the com
 (or $GOPATH) and use the `go get` command. In other words,
 
 ```sh
-git clone git@github.com:agile-edgex/edgex.git
+git clone git@github.com:agile-edge/edgex.git
 cd edgex
 make build
 ```
@@ -83,18 +83,18 @@ If you do want to root everything under $GOPATH, you're free to use that pattern
 
 ```sh
 GO111MODULE=on && export GO111MODULE
-go get github.com/agile-edgex/edgex
-cd $GOPATH/src/github.com/agile-edgex/edgex
+go get github.com/agile-edge/edgex
+cd $GOPATH/src/github.com/agile-edge/edgex
 make build
 ```
 
 #### Deploy EdgeX
 
-Recommended deployment of EdgeX services is with Docker. See [Getting Started with Docker](https://docs.agile-edgex.org/2.0/getting-started/Ch-GettingStartedUsers/) for more details. 
+Recommended deployment of EdgeX services is with Docker. See [Getting Started with Docker](https://docs.agile-edge.org/2.0/getting-started/Ch-GettingStartedUsers/) for more details. 
 
 #### Hybrid for debug/testing
 
-If you need to run and/or debug one of the services locally, simply stop the docker container running that service and run the service locally from command-line or from your debugger. All executables are located in the `cmd/<service-name>` folders. See [Working in a Hybrid Environment](https://docs.agile-edgex.org/2.0/getting-started/Ch-GettingStartedHybrid/) for more details.
+If you need to run and/or debug one of the services locally, simply stop the docker container running that service and run the service locally from command-line or from your debugger. All executables are located in the `cmd/<service-name>` folders. See [Working in a Hybrid Environment](https://docs.agile-edge.org/2.0/getting-started/Ch-GettingStartedHybrid/) for more details.
 
 > *Note that this works best when running the service in non-secure mode. i.e. with environment variable `EDGEX_SECURITY_SECRET_STORE=false`*
 
@@ -131,7 +131,7 @@ INCLUDE_DELAYED_START_BUILD_SUPPORT:="true"
 
 #### Run 
 
-The **Compose Builder** tool has the `dev` option to generate and run EdgeX compose files using locally built images for above. See [Compose Builder README](https://github.com/agile-edgex/edgex-compose/tree/main/compose-builder#readme) for more details.
+The **Compose Builder** tool has the `dev` option to generate and run EdgeX compose files using locally built images for above. See [Compose Builder README](https://github.com/agile-edge/edgex-compose/tree/main/compose-builder#readme) for more details.
 
 ```bash
 make run no-secty dev
@@ -141,8 +141,8 @@ make run no-secty dev
 
 #### Community
 
-- Discussion: https://github.com/orgs/agile-edgex/discussions
-- Mailing lists: https://lists.agile-edgex.org/mailman/listinfo
+- Discussion: https://github.com/orgs/agile-edge/discussions
+- Mailing lists: https://lists.agile-edge.org/mailman/listinfo
 
 ## License
 
@@ -150,8 +150,8 @@ make run no-secty dev
 
 ## Versioning
 
-Please refer to the EdgeX Foundry [versioning policy](https://wiki.agile-edgex.org/pages/viewpage.action?pageId=21823969) for information on how EdgeX services are released and how EdgeX services are compatible with one another.  Specifically, device services (and the associated SDK), application services (and the associated app functions SDK), and client tools (like the EdgeX CLI and UI) can have independent minor releases, but these services must be compatible with the latest major release of EdgeX.
+Please refer to the EdgeX Foundry [versioning policy](https://wiki.agile-edge.org/pages/viewpage.action?pageId=21823969) for information on how EdgeX services are released and how EdgeX services are compatible with one another.  Specifically, device services (and the associated SDK), application services (and the associated app functions SDK), and client tools (like the EdgeX CLI and UI) can have independent minor releases, but these services must be compatible with the latest major release of EdgeX.
 
 ## Long Term Support
 
-Please refer to the EdgeX Foundry [LTS policy](https://wiki.agile-edgex.org/pages/viewpage.action?pageId=69173332) for information on support of EdgeX releases. The EdgeX community does not offer support on any non-LTS release outside of the latest release.
+Please refer to the EdgeX Foundry [LTS policy](https://wiki.agile-edge.org/pages/viewpage.action?pageId=69173332) for information on support of EdgeX releases. The EdgeX community does not offer support on any non-LTS release outside of the latest release.

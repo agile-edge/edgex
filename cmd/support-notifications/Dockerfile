@@ -56,4 +56,4 @@ RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
 USER 1000:1000
 
 ENTRYPOINT ["/support-notifications"]
-CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]
+CMD ["-cp=consul.http://core-consul:8500", "--registry"]

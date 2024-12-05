@@ -56,4 +56,4 @@ RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
 USER 1000:1000
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/security-proxy-auth", "-cp=consul.http://edgex-core-consul:8500"]
+CMD ["/security-proxy-auth", "-cp=consul.http://core-consul:8500"]

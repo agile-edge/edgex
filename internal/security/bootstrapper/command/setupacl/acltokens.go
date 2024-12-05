@@ -365,7 +365,7 @@ func (c *cmd) createNewToken(bootstrapACLTokenID string, createToken CreateRegis
 	}
 
 	jsonPayload, err := json.Marshal(&createToken)
-	c.loggingClient.Tracef("payload: %v", createToken)
+	c.loggingClient.Debugf("payload: %v", createToken)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal CreatRegistryToken JSON string payload: %v", err)
 	}

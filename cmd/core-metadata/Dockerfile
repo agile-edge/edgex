@@ -54,5 +54,9 @@ COPY --from=builder /edgex/cmd/core-metadata/core-metadata /
 COPY --from=builder /edgex/cmd/core-metadata/res/configuration.yaml /res/configuration.yaml
 COPY --from=builder /edgex/cmd/core-metadata/res/uom.yaml /res/uom.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["/core-metadata"]
 CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]

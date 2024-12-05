@@ -19,7 +19,7 @@ FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
     apk add --update --no-cache make git
 
 WORKDIR /edgex
@@ -36,8 +36,8 @@ RUN make cmd/security-spiffe-token-provider/security-spiffe-token-provider
 #Next image - Copy built Go binary into new workspace
 FROM alpine:3.20
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
-    apk add --update --no-cache dumb-init && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
     apk --no-cache upgrade
 
 COPY --from=builder /edgex/Attribution.txt /
@@ -45,5 +45,9 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
 COPY --from=builder /edgex/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT [ "/security-spiffe-token-provider" ]
-CMD ["-cp=consul.http://edgex-core-consul:8500"]
+CMD ["-cp=consul.http://core-consul:8500"]

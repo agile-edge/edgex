@@ -145,7 +145,7 @@ func (c *cmd) getOrCreateRegistryPolicy(tokenID, policyName, policyRules string)
 	}
 
 	jsonPayload, err := json.Marshal(createPolicy)
-	c.loggingClient.Tracef("payload: %v", createPolicy)
+	c.loggingClient.Debugf("payload: %v", createPolicy)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal CreatePolicy JSON string payload: %v", err)
 	}

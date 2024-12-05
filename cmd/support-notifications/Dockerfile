@@ -51,5 +51,9 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/support-notifications/support-notifications /
 COPY --from=builder /edgex/cmd/support-notifications/res/configuration.yaml /res/configuration.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["/support-notifications"]
 CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]

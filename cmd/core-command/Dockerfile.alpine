@@ -21,7 +21,7 @@ FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
     apk add --update --no-cache make git
 
 WORKDIR /edgex
@@ -38,8 +38,8 @@ RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS  cmd/core-command/core-command
 #Next image - Copy built Go binary into new workspace
 FROM alpine:3.20
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
-    apk add --update --no-cache dumb-init && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
     apk --no-cache upgrade
 
 ENV APP_PORT=59882
@@ -52,5 +52,9 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/core-command/core-command /
 COPY --from=builder /edgex/cmd/core-command/res/configuration.yaml /res/configuration.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["/core-command"]
-CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]
+CMD ["-cp=consul.http://core-consul:8500", "--registry"]

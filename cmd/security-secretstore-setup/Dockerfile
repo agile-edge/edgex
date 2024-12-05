@@ -60,4 +60,8 @@ COPY --from=builder /edgex/cmd/security-secretstore-setup/entrypoint.sh /usr/loc
 RUN chmod +x /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["entrypoint.sh"]

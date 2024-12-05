@@ -61,4 +61,8 @@ COPY --from=builder /edgex/cmd/security-proxy-setup/entrypoint.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["entrypoint.sh"]

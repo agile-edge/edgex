@@ -21,7 +21,7 @@ FROM golang:1.23-alpine3.20 AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
     apk add --update --no-cache make git
 
 WORKDIR /edgex
@@ -38,8 +38,8 @@ RUN make cmd/security-bootstrapper/security-bootstrapper
 #Next image - Copy built Go binary into new workspace
 FROM alpine:3.20
 
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.tuna.tsinghua.edu.cn|g' /etc/apk/repositories && \
-    apk add --update --no-cache dumb-init && \
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
     apk --no-cache upgrade
 
 ENV SECURITY_INIT_DIR /edgex-init
@@ -72,6 +72,10 @@ COPY --from=builder /edgex/cmd/security-bootstrapper/consul-acl/ ${SECURITY_INIT
 # setup entry point script
 COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
 
 ENTRYPOINT ["/entrypoint.sh"]
 

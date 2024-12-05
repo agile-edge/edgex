@@ -74,6 +74,10 @@ COPY --from=builder /edgex/cmd/security-bootstrapper/consul-acl/ ${SECURITY_INIT
 COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 # gate is one subcommand for security-bootstrapper to do security bootstrapping

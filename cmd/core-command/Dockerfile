@@ -53,5 +53,9 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/core-command/core-command /
 COPY --from=builder /edgex/cmd/core-command/res/configuration.yaml /res/configuration.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge && chown -R 1000:1000 /var/log/agile-edge
+USER 1000:1000
+
 ENTRYPOINT ["/core-command"]
 CMD ["-cp=consul.http://edgex-core-consul:8500", "--registry"]

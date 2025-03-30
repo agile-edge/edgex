@@ -22,7 +22,8 @@ FROM ${BUILDER_BASE} AS builder
 
 WORKDIR /edgex
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -38,9 +39,9 @@ FROM alpine:3.20
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
       copyright='Copyright (c) 2023 Intel Corporation'
 
-RUN apk add --update --no-cache dumb-init su-exec
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init su-exec tzdata && \
+    apk --no-cache upgrade
 
 ENV SECURITY_INIT_DIR /edgex-init
 ENV SECURITY_INIT_STAGING /edgex-init-staging
@@ -73,6 +74,9 @@ COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-mosquitto/con
 # setup entry point script
 COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["/entrypoint.sh"]
 

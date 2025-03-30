@@ -24,7 +24,8 @@ ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -37,9 +38,9 @@ RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS  cmd/core-command/core-command
 
 FROM alpine:3.20
 
-RUN apk add --update --no-cache dumb-init
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
+    apk --no-cache upgrade
 
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
       copyright='Copyright (c) 2018: Dell, Cavium, Copyright (c) 2023: Intel Corporation'
@@ -53,6 +54,9 @@ COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/core-command/core-command /
 COPY --from=builder /edgex/cmd/core-command/res/configuration.yaml /res/configuration.yaml
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["/core-command"]
 CMD ["-cp=keeper.http://core-keeper:59890", "--registry"]

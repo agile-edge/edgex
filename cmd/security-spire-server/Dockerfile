@@ -40,5 +40,8 @@ COPY cmd/security-spire-server/docker-entrypoint.sh /usr/local/bin/
 COPY cmd/security-spire-server/server.conf /usr/local/etc/spire/server.conf.tpl
 COPY cmd/security-spire-server/openssl.conf /usr/local/etc/
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
+
 ENTRYPOINT [ "/usr/bin/dumb-init" ]
 CMD [ "--verbose", "docker-entrypoint.sh" ]

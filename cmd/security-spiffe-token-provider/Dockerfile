@@ -47,5 +47,8 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
 COPY --from=builder /edgex/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
+
 ENTRYPOINT [ "/security-spiffe-token-provider" ]
 CMD ["-cp=keeper.http://core-keeper:59890"]

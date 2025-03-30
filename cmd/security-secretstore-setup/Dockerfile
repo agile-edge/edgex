@@ -21,7 +21,8 @@ FROM ${BUILDER_BASE} AS builder
 
 WORKDIR /edgex
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -58,5 +59,8 @@ COPY --from=builder /edgex/cmd/security-secretstore-setup/security-secretstore-s
 COPY --from=builder /edgex/cmd/security-secretstore-setup/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["entrypoint.sh"]

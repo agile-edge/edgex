@@ -26,7 +26,8 @@ WORKDIR /edgex
 
 RUN sed -e 's/dl-cdn[.]alpinelinux.org/dl-4.alpinelinux.org/g' -i~ /etc/apk/repositories
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -51,9 +52,15 @@ EXPOSE $APP_PORT
 # So we can try these.
 RUN sed -e 's/dl-cdn[.]alpinelinux.org/dl-4.alpinelinux.org/g' -i~ /etc/apk/repositories
 
-RUN apk add --update --no-cache dumb-init
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
+    apk --no-cache upgrade
+
 COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/cmd/core-keeper/core-keeper /
 COPY --from=builder /edgex/cmd/core-keeper/res/configuration.yaml /res/configuration.yaml
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["/core-keeper"]

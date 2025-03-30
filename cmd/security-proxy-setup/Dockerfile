@@ -21,7 +21,8 @@ FROM ${BUILDER_BASE} AS builder
 
 WORKDIR /edgex
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -34,9 +35,9 @@ RUN make cmd/secrets-config/secrets-config
 
 FROM alpine:3.20
 
-RUN apk add --update --no-cache dumb-init su-exec openssl yq
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init su-exec openssl yq tzdata && \
+    apk --no-cache upgrade
 
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
       copyright='Copyright (c) 2019: Dell Technologies, Inc.; Copyright (C) 2023 Intel Corporation'
@@ -59,5 +60,8 @@ COPY --from=builder /edgex/cmd/secrets-config/secrets-config .
 COPY --from=builder /edgex/cmd/security-proxy-setup/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["entrypoint.sh"]

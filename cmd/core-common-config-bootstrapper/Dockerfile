@@ -24,7 +24,8 @@ ARG ADD_BUILD_TAGS=""
 
 WORKDIR /edgex
 
-RUN apk add --update --no-cache make git
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache make git
 
 ARG GO_PROXY="https://goproxy.cn,direct"
 ENV GOPROXY=$GO_PROXY
@@ -42,9 +43,9 @@ LABEL license='SPDX-License-Identifier: Apache-2.0' \
       copyright='Copyright (c) 2023: Intel Corporation'
 
 
-RUN apk add --update --no-cache dumb-init
-# Ensure using latest versions of all installed packages to avoid any recent CVEs
-RUN apk --no-cache upgrade
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' /etc/apk/repositories && \
+    apk add --update --no-cache dumb-init tzdata && \
+    apk --no-cache upgrade
 
 COPY --from=builder /edgex/Attribution.txt /
 COPY --from=builder /edgex/security.txt /
@@ -54,6 +55,9 @@ COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/res/configuration
 COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
+
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
 
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["/core-common-config-bootstrapper", "-cp=keeper.http://core-keeper:59890"]

@@ -57,13 +57,13 @@ MICROSERVICES= \
 .PHONY: $(MICROSERVICES)
 
 VERSION=$(shell cat ./VERSION 2>/dev/null || echo 0.0.0)
-DOCKER_TAG=$(VERSION)-dev
+DOCKER_TAG=$(VERSION)
 
 ifeq ($(ENABLE_FULL_RELRO), true)
 	ENABLE_FULL_RELRO_GOFLAGS = -bindnow
 endif
 
-GOFLAGS=-ldflags "-s -w -X github.com/agile-edge/edgex.Version=$(VERSION) $(ENABLE_FULL_RELRO_GOFLAGS)" -trimpath -mod=readonly
+GOFLAGS=-ldflags "-s -w -X github.com/ccr.ccs.tencentyun.com/agile-edge/edgex.Version=$(VERSION) $(ENABLE_FULL_RELRO_GOFLAGS)" -trimpath -mod=readonly
 GOTESTFLAGS?=-race
 
 ifeq ($(ENABLE_PIE), true)
@@ -87,11 +87,6 @@ ifeq ($(INCLUDE_DELAYED_START_BUILD_SUPPORT),"false")
 endif
 
 NO_MESSAGEBUS_GO_BUILD_TAG:=no_messagebus
-
-# Base docker image to speed up local builds
-BASE_DOCKERFILE=https://raw.githubusercontent.com/agile-edge/ci-build-images/golang-${GO_VERSION}/Dockerfile
-LOCAL_CACHE_IMAGE_BASE=edgex-go-local-cache-base
-LOCAL_CACHE_IMAGE=edgex-go-local-cache
 
 build: $(MICROSERVICES)
 
@@ -194,209 +189,136 @@ docker-nats:
 docker-noziti:
 	make -e ADD_BUILD_TAGS=no_openziti docker
 
-clean_docker_base:
-	docker rmi -f $(LOCAL_CACHE_IMAGE) $(LOCAL_CACHE_IMAGE_BASE) 
-
-docker_base:
-	echo "Building local cache image";\
-	response=$(shell curl --write-out '%{http_code}' --silent --output /dev/null "$(BASE_DOCKERFILE)"); \
-	if [ "$${response}" = "200" ]; then \
-		echo "Found base Dockerfile"; \
-		curl -s "$(BASE_DOCKERFILE)" | docker build -t $(LOCAL_CACHE_IMAGE_BASE) -f - .; \
-		echo "FROM $(LOCAL_CACHE_IMAGE_BASE)\nWORKDIR /edgex-go\nCOPY go.mod .\nRUN go mod download" | docker build -t $(LOCAL_CACHE_IMAGE) -f - .; \
-	else \
-		echo "No base Dockerfile found. Using golang:$(GO_VERSION)-alpine"; \
-		echo "FROM golang:$(GO_VERSION)-alpine\nRUN apk add --update make git\nWORKDIR /edgex-go\nCOPY go.mod .\nRUN go mod download" | docker build -t $(LOCAL_CACHE_IMAGE) -f - .; \
-	fi
+images: dmetadata ddata dcommand dcommon-config dkeeper dnotifications dscheduler
 
 dcore: dmetadata ddata dcommand
 
 dmetadata: docker_core_metadata
-docker_core_metadata: docker_base
+docker_core_metadata: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-metadata/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/core-metadata:$(GIT_SHA) \
-		-t agile-edge/core-metadata:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/core-metadata:$(DOCKER_TAG) \
 		.
 
 ddata: docker_core_data
-docker_core_data: docker_base
+docker_core_data: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-data/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/core-data:$(GIT_SHA) \
-		-t agile-edge/core-data:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/core-data:$(DOCKER_TAG) \
 		.
 
 dcommand: docker_core_command
-docker_core_command: docker_base
+docker_core_command: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-command/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/core-command:$(GIT_SHA) \
-		-t agile-edge/core-command:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/core-command:$(DOCKER_TAG) \
 		.
 
 dcommon-config: docker_core_common_config
-docker_core_common_config: docker_base
+docker_core_common_config: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/core-common-config-bootstrapper:$(GIT_SHA) \
-		-t agile-edge/core-common-config-bootstrapper:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
 
 dkeeper: docker_core_keeper
-docker_core_keeper: docker_base
+docker_core_keeper: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-keeper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/core-keeper:$(GIT_SHA) \
-		-t agile-edge/core-keeper:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/core-keeper:$(DOCKER_TAG) \
 		.
 
-dsupport: dnotifications dscheduler dscheduler
+dsupport: dnotifications dscheduler
 
 dnotifications: docker_support_notifications
-docker_support_notifications: docker_base
+docker_support_notifications: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/support-notifications/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/support-notifications:$(GIT_SHA) \
-		-t agile-edge/support-notifications:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/support-notifications:$(DOCKER_TAG) \
 		.
 
 dscheduler: docker_support_scheduler
-docker_support_scheduler: docker_base
+docker_support_scheduler: 
 	docker build \
 		--build-arg ADD_BUILD_TAGS=$(ADD_BUILD_TAGS) \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/support-scheduler/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/support-scheduler:$(GIT_SHA) \
-		-t agile-edge/support-scheduler:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/support-scheduler:$(DOCKER_TAG) \
 		.
 
 dproxya: docker_security_proxy_auth
-docker_security_proxy_auth: docker_base
+docker_security_proxy_auth: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-proxy-auth/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-proxy-auth:$(GIT_SHA) \
-		-t agile-edge/security-proxy-auth:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-proxy-auth:$(DOCKER_TAG) \
 		.
 
 dproxys: docker_security_proxy_setup
-docker_security_proxy_setup: docker_base
+docker_security_proxy_setup: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-proxy-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-proxy-setup:$(GIT_SHA) \
-		-t agile-edge/security-proxy-setup:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-proxy-setup:$(DOCKER_TAG) \
 		.
 dsecretstore: docker_security_secretstore_setup
-docker_security_secretstore_setup: docker_base
+docker_security_secretstore_setup: 
 		docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-secretstore-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-secretstore-setup:$(GIT_SHA) \
-		-t agile-edge/security-secretstore-setup:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-secretstore-setup:$(DOCKER_TAG) \
 		.
 
 dbootstrapper: docker_security_bootstrapper
-docker_security_bootstrapper: docker_base
+docker_security_bootstrapper: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-bootstrapper:$(GIT_SHA) \
-		-t agile-edge/security-bootstrapper:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-bootstrapper:$(DOCKER_TAG) \
 		.
 
 dspires: docker_security_spire_server
-docker_security_spire_server: docker_base
+docker_security_spire_server: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-server/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-spire-server:$(GIT_SHA) \
-		-t agile-edge/security-spire-server:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-spire-server:$(DOCKER_TAG) \
 		.
 
 dspirea: docker_security_spire_agent
-docker_security_spire_agent: docker_base
+docker_security_spire_agent: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-agent/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-spire-agent:$(GIT_SHA) \
-		-t agile-edge/security-spire-agent:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-spire-agent:$(DOCKER_TAG) \
 		.
 
 dspirec: docker_security_spire_config
-docker_security_spire_config: docker_base
+docker_security_spire_config: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-config/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-spire-config:$(GIT_SHA) \
-		-t agile-edge/security-spire-config:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-spire-config:$(DOCKER_TAG) \
 		.
 
 dspiffetp: docker_security_spiffe_token_provider
-docker_security_spiffe_token_provider: docker_base
+docker_security_spiffe_token_provider: 
 	docker build \
-		--build-arg http_proxy \
-		--build-arg https_proxy \
-		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spiffe-token-provider/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t agile-edge/security-spiffe-token-provider:$(GIT_SHA) \
-		-t agile-edge/security-spiffe-token-provider:$(DOCKER_TAG) \
+		-t ccr.ccs.tencentyun.com/agile-edge/security-spiffe-token-provider:$(DOCKER_TAG) \
 		.
 
 vendor:

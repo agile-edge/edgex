@@ -51,5 +51,8 @@ COPY --from=builder /edgex/security.txt /
 COPY --from=builder /edgex/cmd/support-scheduler/support-scheduler /
 COPY --from=builder /edgex/cmd/support-scheduler/res /res
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
+
 ENTRYPOINT ["/support-scheduler"]
 CMD ["-cp=keeper.http://core-keeper:59890", "--registry"]

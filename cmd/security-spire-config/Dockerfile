@@ -42,5 +42,8 @@ COPY cmd/security-spire-config/seed_builtin_entries.sh /usr/local/etc/spiffe-scr
 
 WORKDIR /
 
+ENV TZ=Asia/Shanghai
+RUN mkdir -p /var/log/agile-edge
+
 ENTRYPOINT [ "/usr/bin/dumb-init" ]
 CMD [ "--verbose", "docker-entrypoint.sh" ]

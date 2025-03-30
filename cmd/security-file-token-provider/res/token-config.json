@@ -1,0 +1,202 @@
+{
+  "core-command": {
+    "edgex_use_defaults": true
+  },
+  "core-data": {
+    "edgex_use_defaults": true
+  },
+  "core-metadata": {
+    "edgex_use_defaults": true
+  },
+  "core-common-config-bootstrapper": {
+    "edgex_use_defaults": true
+  },
+  "core-keeper": {
+    "edgex_use_defaults": true
+  },
+  "security-bootstrapper-redis": {
+    "edgex_use_defaults": true
+  },
+  "security-bootstrapper-postgres": {
+    "edgex_use_defaults": true
+  },
+  "security-bootstrapper-messagebus": {
+    "edgex_use_defaults": true
+  },
+  "support-notifications": {
+    "edgex_use_defaults": true
+  },
+  "app-rules-engine": {
+    "edgex_use_defaults": true
+  },
+  "device-virtual": {
+    "edgex_use_defaults": true
+  },
+  "device-rest": {
+    "edgex_use_defaults": true
+  },
+  "support-scheduler": {
+    "edgex_use_defaults": true
+  },
+  "security-proxy-auth": {
+    "edgex_use_defaults": true
+  },
+  "security-proxy-setup": {
+    "edgex_use_defaults": true,
+    "custom_policy": {
+      "path": {
+        "identity/entity/name": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "identity/entity/name/*": {
+          "capabilities": [
+            "read",
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        "identity/entity-alias": {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "identity/oidc/role": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "identity/oidc/role/*": {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "auth/userpass/users/*": {
+          "capabilities": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        "sys/auth": {
+          "capabilities": [
+            "read"
+          ]
+        },
+        "sys/policies/acl": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "sys/policies/acl/edgex-user-*": {
+          "capabilities": [
+            "read",
+            "create",
+            "update",
+            "delete"
+          ]
+        }
+      }
+    }
+  },
+  "security-spiffe-token-provider": {
+    "edgex_use_defaults": true,
+    "custom_policy": {
+      "path": {
+        "identity/entity/name": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "identity/entity/name/*": {
+          "capabilities": [
+            "read",
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        "identity/entity-alias": {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "identity/oidc/role": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "identity/oidc/role/*": {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "auth/userpass/users/*": {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "auth/token/roles/*" : {
+          "capabilities": [
+            "create",
+            "update"
+          ]
+        },
+        "sys/auth": {
+          "capabilities": [
+            "read"
+          ]
+        },
+        "sys/policies/acl": {
+          "capabilities": [
+            "list"
+          ]
+        },
+        "sys/policies/acl/edgex-service-*": {
+          "capabilities": [
+            "create",
+            "read",
+            "update",
+            "delete"
+          ]
+        },
+        "secret/edgex/security-bootstrapper-redis/redisdb": {
+          "capabilities": [
+            "read"
+          ]
+        },
+        "secret/edgex/security-bootstrapper-postgres/postgres": {
+          "capabilities": [
+            "read"
+          ]
+        },
+        "secret/edgex/security-bootstrapper-messagebus/message-bus": {
+          "capabilities": [
+            "read"
+          ]
+        },
+        "secret/edgex/*": {
+          "capabilities": [
+            "list",
+            "create",
+            "update",
+            "delete"
+          ]
+        }
+      }
+    }
+  },
+  "rules-engine": {
+    "edgex_use_defaults": true
+  },
+  "ui": {
+    "edgex_use_defaults": true
+  }
+}

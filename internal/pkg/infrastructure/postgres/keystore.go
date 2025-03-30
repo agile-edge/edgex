@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"time"
 
-	pgClient "github.com/edgexfoundry/edgex-go/internal/pkg/db/postgres"
+	pgClient "github.com/agile-edge/edgex-go/internal/pkg/db/postgres"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
 	"github.com/google/uuid"
 )

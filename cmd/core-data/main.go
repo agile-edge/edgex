@@ -19,7 +19,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/data"
+	"github.com/agile-edge/edgex-go/internal/core/data"
 
 	"github.com/labstack/echo/v4"
 )

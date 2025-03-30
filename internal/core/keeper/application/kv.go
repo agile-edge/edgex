@@ -8,16 +8,16 @@ package application
 import (
 	"context"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/container"
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/utils"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/correlation"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/container"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/utils"
+	"github.com/agile-edge/edgex-go/internal/pkg/correlation"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
-	msgTypes "github.com/edgexfoundry/go-mod-messaging/v4/pkg/types"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
+	msgTypes "github.com/agile-edge/go-mod-messaging/v4/pkg/types"
 )
 
 func Keys(key string, keysOnly bool, isRaw bool, dic *di.Container) (configs []models.KVResponse, err errors.EdgeX) {

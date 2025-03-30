@@ -6,9 +6,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/config"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/config"
 )
 
 // ConfigurationName contains the name of scheduler's config.ConfigurationStruct implementation in the DIC.

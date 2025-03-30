@@ -15,9 +15,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/core/data/config"
+	"github.com/agile-edge/edgex-go/internal/core/data/config"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 // ConfigurationName contains the name of data's config.ConfigurationStruct implementation in the DIC.

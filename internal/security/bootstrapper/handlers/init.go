@@ -21,14 +21,14 @@ import (
 	"os"
 	"sync"
 
-	bootstrapper "github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/command/help"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/interfaces"
+	bootstrapper "github.com/agile-edge/edgex-go/internal/security/bootstrapper/command"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/command/help"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/container"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/interfaces"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 // Bootstrap is to implement BootstrapHandler

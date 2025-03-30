@@ -17,14 +17,14 @@ package tokenmaintenance
 import (
 	"testing"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 	"github.com/stretchr/testify/require"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/types"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets/mocks"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets/mocks"
 )
 
 func TestCreateTokenIssuingToken(t *testing.T) {

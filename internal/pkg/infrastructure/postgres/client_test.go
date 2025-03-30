@@ -6,10 +6,10 @@
 package postgres
 
 import (
-	dataInterfaces "github.com/edgexfoundry/edgex-go/internal/core/data/infrastructure/interfaces"
-	metadataInterfaces "github.com/edgexfoundry/edgex-go/internal/core/metadata/infrastructure/interfaces"
-	notificationsInterfaces "github.com/edgexfoundry/edgex-go/internal/support/notifications/infrastructure/interfaces"
-	schedulerInterfaces "github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	dataInterfaces "github.com/agile-edge/edgex-go/internal/core/data/infrastructure/interfaces"
+	metadataInterfaces "github.com/agile-edge/edgex-go/internal/core/metadata/infrastructure/interfaces"
+	notificationsInterfaces "github.com/agile-edge/edgex-go/internal/support/notifications/infrastructure/interfaces"
+	schedulerInterfaces "github.com/agile-edge/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 )
 
 // Check the implementation of Postgres satisfies the DB client

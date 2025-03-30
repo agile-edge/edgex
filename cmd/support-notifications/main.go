@@ -25,7 +25,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications"
+	"github.com/agile-edge/edgex-go/internal/support/notifications"
 
 	"github.com/labstack/echo/v4"
 )

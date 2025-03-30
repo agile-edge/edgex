@@ -13,9 +13,9 @@ import (
 	"encoding/base64"
 	"io"
 
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils/crypto/interfaces"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils/crypto/interfaces"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 )
 
 const aesKey = "RO6gGYKocUahpdX15k9gYvbLuSxbKrPz"

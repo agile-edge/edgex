@@ -13,12 +13,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/edgexfoundry/edgex-go/internal"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/interfaces"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/edgex-go/internal"
+	"github.com/agile-edge/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 const (

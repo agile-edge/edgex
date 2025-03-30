@@ -6,22 +6,22 @@
 package http
 
 import (
-	commonDTO "github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/common"
+	commonDTO "github.com/agile-edge/go-mod-core-contracts/v4/dtos/common"
 	"net/http"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/requests"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/responses"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos/responses"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/application"
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/constants"
-	httpUtils "github.com/edgexfoundry/edgex-go/internal/core/keeper/utils"
-	"github.com/edgexfoundry/edgex-go/internal/io"
-	"github.com/edgexfoundry/edgex-go/internal/pkg"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/application"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/constants"
+	httpUtils "github.com/agile-edge/edgex-go/internal/core/keeper/utils"
+	"github.com/agile-edge/edgex-go/internal/io"
+	"github.com/agile-edge/edgex-go/internal/pkg"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils"
 
 	"github.com/labstack/echo/v4"
 )

@@ -24,14 +24,14 @@ import (
 	"strings"
 	"testing"
 
-	secretstoreConfig "github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	loaderMock "github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/authtokenloader/mocks"
-	fileMock "github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer/mocks"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets/mocks"
+	secretstoreConfig "github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	loaderMock "github.com/agile-edge/go-mod-secrets/v4/pkg/token/authtokenloader/mocks"
+	fileMock "github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer/mocks"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets/mocks"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/config"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/config"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

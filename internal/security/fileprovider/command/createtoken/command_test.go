@@ -18,13 +18,13 @@ package createtoken
 import (
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/container"
-	secretStoreConfig "github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/config"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/container"
+	secretStoreConfig "github.com/agile-edge/edgex-go/internal/security/secretstore/config"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 
 	"github.com/stretchr/testify/require"
 )

@@ -13,10 +13,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/config/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets"
+	"github.com/agile-edge/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

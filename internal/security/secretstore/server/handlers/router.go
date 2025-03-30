@@ -6,10 +6,10 @@
 package handlers
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/controller"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/controller"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
 
 	"github.com/labstack/echo/v4"
 )

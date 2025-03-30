@@ -9,14 +9,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/data/application"
-	dataContainer "github.com/edgexfoundry/edgex-go/internal/core/data/container"
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-messaging/v4/pkg/types"
+	"github.com/agile-edge/edgex-go/internal/core/data/application"
+	dataContainer "github.com/agile-edge/edgex-go/internal/core/data/container"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-messaging/v4/pkg/types"
 )
 
 func SubscribeSystemEvents(ctx context.Context, dic *di.Container) errors.EdgeX {

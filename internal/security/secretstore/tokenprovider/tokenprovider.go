@@ -23,10 +23,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/utils"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/utils"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 const OneShotProvider = "oneshot"

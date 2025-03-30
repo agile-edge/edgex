@@ -6,7 +6,7 @@
 package config
 
 import (
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v4/config"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v4/config"
 )
 
 // ConfigurationStruct contains the configuration properties for the Support Scheduler Service

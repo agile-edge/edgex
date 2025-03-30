@@ -9,16 +9,16 @@ import (
 	"fmt"
 	"time"
 
-	pkgCommon "github.com/edgexfoundry/edgex-go/internal/pkg/common"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/application/channel"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
+	pkgCommon "github.com/agile-edge/edgex-go/internal/pkg/common"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/application/channel"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/config"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 )
 
 // firstSend sends the notification and return the transmission

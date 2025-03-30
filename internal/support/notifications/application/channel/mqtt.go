@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/messaging"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/messaging"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
@@ -54,7 +54,7 @@ func (sender *MQTTSender) loadClient(address models.MQTTPubAddress) mqtt.Client 
 }
 
 // createMqttClient creates a new MQTT client
-// The implementation can refer to https://github.com/edgexfoundry/app-functions-sdk-go/blob/1bc0c5a6f3d13f883f4b71f940f0cb2168d0daab/pkg/secure/mqttfactory.go#L58
+// The implementation can refer to https://github.com/agile-edge/app-functions-sdk-go/blob/1bc0c5a6f3d13f883f4b71f940f0cb2168d0daab/pkg/secure/mqttfactory.go#L58
 func (sender *MQTTSender) createClient(address models.MQTTPubAddress) (mqtt.Client, errors.EdgeX) {
 	sender.mutex.Lock()
 	defer sender.mutex.Unlock()

@@ -6,9 +6,9 @@
 package utils
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/constants"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/constants"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 )
 
 // ValidateKeys validates if the key contains invalid characters

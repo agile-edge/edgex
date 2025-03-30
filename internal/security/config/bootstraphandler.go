@@ -13,14 +13,14 @@ import (
 	"os"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command/help"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/command/proxy"
-	"github.com/edgexfoundry/edgex-go/internal/security/config/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/container"
+	"github.com/agile-edge/edgex-go/internal/security/config/command/help"
+	"github.com/agile-edge/edgex-go/internal/security/config/command/proxy"
+	"github.com/agile-edge/edgex-go/internal/security/config/interfaces"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 type Bootstrap struct {

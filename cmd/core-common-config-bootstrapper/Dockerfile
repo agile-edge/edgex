@@ -22,12 +22,15 @@ FROM ${BUILDER_BASE} AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk add --update --no-cache make git
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-common-config-bootstrapper/core-common-config-bootstrapper
@@ -43,14 +46,14 @@ RUN apk add --update --no-cache dumb-init
 # Ensure using latest versions of all installed packages to avoid any recent CVEs
 RUN apk --no-cache upgrade
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/core-common-config-bootstrapper /
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/res/configuration.yaml /res/configuration.yaml
 
-COPY --from=builder /edgex-go/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
+COPY --from=builder /edgex/cmd/core-common-config-bootstrapper/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/core-common-config-bootstrapper", "-cp=keeper.http://edgex-core-keeper:59890"]
+CMD ["/core-common-config-bootstrapper", "-cp=keeper.http://core-keeper:59890"]

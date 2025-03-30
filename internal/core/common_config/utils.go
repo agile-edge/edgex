@@ -6,9 +6,9 @@
 package common_config
 
 import (
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/environment"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/flags"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/environment"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/flags"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 // getOverwriteConfig returns a boolean value based on whether the -o flag or the EDGEX_OVERWRITE_CONFIG environment variable is set

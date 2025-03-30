@@ -21,11 +21,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/config"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/types"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/types"
 )
 
 // LoadInitResponse load the resp-init.json file content from secret store

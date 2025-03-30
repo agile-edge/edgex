@@ -12,20 +12,20 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/edgexfoundry/edgex-go/internal"
-	"github.com/edgexfoundry/edgex-go/internal/security/common"
-	"github.com/edgexfoundry/edgex-go/internal/security/kdf"
-	"github.com/edgexfoundry/edgex-go/internal/security/pipedhexreader"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore"
-	secretStoreConfig "github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokenmaintenance"
+	"github.com/agile-edge/edgex-go/internal"
+	"github.com/agile-edge/edgex-go/internal/security/common"
+	"github.com/agile-edge/edgex-go/internal/security/kdf"
+	"github.com/agile-edge/edgex-go/internal/security/pipedhexreader"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore"
+	secretStoreConfig "github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokenmaintenance"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/authtokenloader"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/types"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/authtokenloader"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets"
 )
 
 const (

@@ -13,7 +13,7 @@ import (
 	"regexp"
 	"sort"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
 	"github.com/blang/semver/v4"
 	"github.com/jackc/pgerrcode"

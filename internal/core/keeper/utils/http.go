@@ -11,9 +11,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/constants"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/constants"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 )
 
 // ParseGetKeyRequestQueryString parses keyOnly and plaintext from the query parameters.

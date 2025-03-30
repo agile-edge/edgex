@@ -8,17 +8,17 @@ package http
 import (
 	"net/http"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/application"
-	"github.com/edgexfoundry/edgex-go/internal/core/keeper/constants"
-	kpContrUtils "github.com/edgexfoundry/edgex-go/internal/core/keeper/utils"
-	edgexIO "github.com/edgexfoundry/edgex-go/internal/io"
-	"github.com/edgexfoundry/edgex-go/internal/pkg"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/application"
+	"github.com/agile-edge/edgex-go/internal/core/keeper/constants"
+	kpContrUtils "github.com/agile-edge/edgex-go/internal/core/keeper/utils"
+	edgexIO "github.com/agile-edge/edgex-go/internal/io"
+	"github.com/agile-edge/edgex-go/internal/pkg"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/requests"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/responses"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos/responses"
 	"github.com/labstack/echo/v4"
 )
 

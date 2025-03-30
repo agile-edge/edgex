@@ -14,18 +14,18 @@ import (
 	"github.com/go-co-op/gocron/v2"
 	"github.com/google/uuid"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	bootstrapInterfaces "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	bootstrapInterfaces "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 
-	"github.com/edgexfoundry/edgex-go/internal/pkg/correlation"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/application/action"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/container"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edge/edgex-go/internal/pkg/correlation"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/application/action"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/config"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/container"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 )
 
 const (

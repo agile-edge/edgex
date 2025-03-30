@@ -12,13 +12,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/helper"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/postgres/container"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/helper"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/postgres/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/secret"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 const (

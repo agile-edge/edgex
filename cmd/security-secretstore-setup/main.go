@@ -24,7 +24,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore"
 )
 
 func main() {

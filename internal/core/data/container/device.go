@@ -6,9 +6,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/pkg/cache"
+	"github.com/agile-edge/edgex-go/internal/pkg/cache"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 // DeviceStoreInterfaceName contains the name of the cache.ActiveDeviceStore implementation in the DIC.

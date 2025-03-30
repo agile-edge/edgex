@@ -26,8 +26,8 @@ export SPIFFE_EDGEX_SVID_BASE
 export SPIFFE_TRUSTDOMAIN
 
 : ${SPIFFE_SERVER_SOCKET:=/tmp/edgex/secrets/spiffe/private/api.sock}
-: ${SPIFFE_EDGEX_SVID_BASE:=spiffe://edgexfoundry.org/service}
-: ${SPIFFE_TRUSTDOMAIN:=edgexfoundry.org}
+: ${SPIFFE_EDGEX_SVID_BASE:=spiffe://agile-edge.org/service}
+: ${SPIFFE_TRUSTDOMAIN:=agile-edge.org}
 
 : ${SPIFFE_AGENT0_CN:=agent0}
 : ${SPIFFE_PARENTID:=spiffe://${SPIFFE_TRUSTDOMAIN}/spire/agent/x509pop/cn/${SPIFFE_AGENT0_CN}}

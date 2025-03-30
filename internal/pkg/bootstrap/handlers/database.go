@@ -11,18 +11,18 @@ import (
 	"sync"
 	"time"
 
-	bootstrapInterfaces "github.com/edgexfoundry/edgex-go/internal/pkg/bootstrap/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/db"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/infrastructure/postgres"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/infrastructure/redis"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/interfaces"
+	bootstrapInterfaces "github.com/agile-edge/edgex-go/internal/pkg/bootstrap/interfaces"
+	"github.com/agile-edge/edgex-go/internal/pkg/db"
+	"github.com/agile-edge/edgex-go/internal/pkg/infrastructure/postgres"
+	"github.com/agile-edge/edgex-go/internal/pkg/infrastructure/redis"
+	"github.com/agile-edge/edgex-go/internal/pkg/interfaces"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/secret"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v4/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v4/config"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 const (

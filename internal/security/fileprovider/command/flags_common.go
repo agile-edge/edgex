@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal"
+	"github.com/agile-edge/edgex-go/internal"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/flags"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/flags"
 )
 
 // commonFlags is a custom implementation of flags.Common from go-mod-bootstrap

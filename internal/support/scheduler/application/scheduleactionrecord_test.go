@@ -15,14 +15,14 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/container"
-	dbMock "github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces/mocks"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/config"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/container"
+	dbMock "github.com/agile-edge/edgex-go/internal/support/scheduler/infrastructure/interfaces/mocks"
 )
 
 var (

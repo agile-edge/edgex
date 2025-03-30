@@ -17,8 +17,8 @@
 package tokenprovider
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/config"
-	secretstoreConfig "github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/config"
+	secretstoreConfig "github.com/agile-edge/edgex-go/internal/security/secretstore/config"
 )
 
 // TokenProvider is the interface that the main program expects

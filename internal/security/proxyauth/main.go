@@ -19,22 +19,22 @@ package proxyauth
 import (
 	"context"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/flags"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/handlers"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v4/config"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/flags"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v4/config"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 
-	"github.com/edgexfoundry/edgex-go"
-	pkgHandlers "github.com/edgexfoundry/edgex-go/internal/pkg/bootstrap/handlers"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils/crypto"
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth/embed"
+	"github.com/agile-edge/edgex-go"
+	pkgHandlers "github.com/agile-edge/edgex-go/internal/pkg/bootstrap/handlers"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils/crypto"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth/config"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth/container"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth/embed"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
 
 	"github.com/labstack/echo/v4"
 )

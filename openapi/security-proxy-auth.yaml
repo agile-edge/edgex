@@ -71,7 +71,7 @@ components:
           description: "Outputs the name of the service the response is from"
           type: string
         config:
-          description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.edgexfoundry.org)."
+          description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.agile-edge.org)."
           type: object
     BaseRequest:
       description: "Defines basic properties which all use-case specific request DTO instances should support."

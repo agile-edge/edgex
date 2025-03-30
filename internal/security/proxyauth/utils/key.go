@@ -5,7 +5,7 @@
 
 package utils
 
-import "github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+import "github.com/agile-edge/go-mod-core-contracts/v4/common"
 
 func SigningKeyName(issuer string) string {
 	return issuer + "/" + common.SigningKeyType

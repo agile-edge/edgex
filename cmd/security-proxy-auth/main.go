@@ -18,7 +18,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth"
 
 	"github.com/labstack/echo/v4"
 )

@@ -8,7 +8,7 @@ package utils
 import (
 	"time"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 // CheckMinInterval parses the ISO 8601 time duration string to Duration type

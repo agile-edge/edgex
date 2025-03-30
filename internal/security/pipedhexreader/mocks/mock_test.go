@@ -9,7 +9,7 @@ package mocks
 import (
 	"testing"
 
-	. "github.com/edgexfoundry/edgex-go/internal/security/pipedhexreader"
+	. "github.com/agile-edge/edgex-go/internal/security/pipedhexreader"
 	"github.com/stretchr/testify/assert"
 )
 

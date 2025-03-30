@@ -8,17 +8,17 @@ package application
 import (
 	"testing"
 
-	cryptoMocks "github.com/edgexfoundry/edgex-go/internal/pkg/utils/crypto/interfaces/mocks"
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/proxyauth/infrastructure/interfaces/mocks"
+	cryptoMocks "github.com/agile-edge/edgex-go/internal/pkg/utils/crypto/interfaces/mocks"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth/container"
+	"github.com/agile-edge/edgex-go/internal/security/proxyauth/infrastructure/interfaces/mocks"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 
 	"github.com/stretchr/testify/require"
 )

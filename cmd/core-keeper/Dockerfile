@@ -19,7 +19,7 @@
 ARG BUILDER_BASE=golang:1.23-alpine3.20
 FROM ${BUILDER_BASE} AS builder
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 # The main mirrors are giving us timeout issues on builds periodically.
 # So we can try these.
@@ -28,8 +28,11 @@ RUN sed -e 's/dl-cdn[.]alpinelinux.org/dl-4.alpinelinux.org/g' -i~ /etc/apk/repo
 
 RUN apk add --update --no-cache make git
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/core-keeper/core-keeper
@@ -49,8 +52,8 @@ EXPOSE $APP_PORT
 RUN sed -e 's/dl-cdn[.]alpinelinux.org/dl-4.alpinelinux.org/g' -i~ /etc/apk/repositories
 
 RUN apk add --update --no-cache dumb-init
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/cmd/core-keeper/core-keeper /
-COPY --from=builder /edgex-go/cmd/core-keeper/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/cmd/core-keeper/core-keeper /
+COPY --from=builder /edgex/cmd/core-keeper/res/configuration.yaml /res/configuration.yaml
 
 ENTRYPOINT ["/core-keeper"]

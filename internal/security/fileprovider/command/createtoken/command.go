@@ -12,18 +12,18 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal"
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/tokenprovider"
+	"github.com/agile-edge/edgex-go/internal"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/container"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/tokenprovider"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/authtokenloader"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/types"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/authtokenloader"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets"
 )
 
 const (

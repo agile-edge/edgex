@@ -20,11 +20,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/config"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/config"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 )
 
 func TestNewCommand(t *testing.T) {

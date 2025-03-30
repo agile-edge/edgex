@@ -9,12 +9,12 @@ import (
 	"context"
 	"embed"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
-	"github.com/edgexfoundry/edgex-go/internal/pkg/db"
-	postgresClient "github.com/edgexfoundry/edgex-go/internal/pkg/db/postgres"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/infrastructure/postgres/cache"
+	"github.com/agile-edge/edgex-go/internal/pkg/db"
+	postgresClient "github.com/agile-edge/edgex-go/internal/pkg/db/postgres"
+	"github.com/agile-edge/edgex-go/internal/pkg/infrastructure/postgres/cache"
 )
 
 type Client struct {

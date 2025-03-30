@@ -17,8 +17,8 @@
 package config
 
 import (
-	secretstoreConfig "github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v4/config"
+	secretstoreConfig "github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v4/config"
 )
 
 type ConfigurationStruct struct {

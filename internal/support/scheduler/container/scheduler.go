@@ -6,9 +6,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/infrastructure/interfaces"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/infrastructure/interfaces"
 )
 
 // SchedulerManagerName contains the name of the interfaces.SchedulerManager implementation in the DIC.

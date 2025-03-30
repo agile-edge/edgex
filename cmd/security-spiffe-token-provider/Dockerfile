@@ -19,12 +19,15 @@
 ARG BUILDER_BASE=golang:1.23-alpine3.20
 FROM ${BUILDER_BASE} AS builder
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk update && apk --no-cache --update add build-base
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/security-spiffe-token-provider/security-spiffe-token-provider
@@ -39,10 +42,10 @@ RUN apk update && apk --no-cache --update add dumb-init curl gcompat
 # Ensure using latest versions of all installed packages to avoid any recent CVEs
 RUN apk --no-cache upgrade
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
-COPY --from=builder /edgex-go/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/security-spiffe-token-provider/security-spiffe-token-provider /
+COPY --from=builder /edgex/cmd/security-spiffe-token-provider/res/configuration.yaml /res/configuration.yaml
 
 ENTRYPOINT [ "/security-spiffe-token-provider" ]
-CMD ["-cp=keeper.http://edgex-core-keeper:59890"]
+CMD ["-cp=keeper.http://core-keeper:59890"]

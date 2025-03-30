@@ -19,12 +19,15 @@
 ARG BUILDER_BASE=golang:1.23-alpine3.20
 FROM ${BUILDER_BASE} AS builder
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk add --update --no-cache make git
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/security-file-token-provider/security-file-token-provider \
@@ -41,18 +44,18 @@ LABEL license='SPDX-License-Identifier: Apache-2.0' \
 
 WORKDIR /
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
 
-COPY --from=builder /edgex-go/cmd/security-file-token-provider/res/token-config.json /res-file-token-provider/token-config.json
-COPY --from=builder /edgex-go/cmd/security-secretstore-setup/res-file-token-provider/configuration.yaml  /res-file-token-provider/configuration.yaml
-COPY --from=builder /edgex-go/cmd/security-secretstore-setup/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/cmd/security-file-token-provider/res/token-config.json /res-file-token-provider/token-config.json
+COPY --from=builder /edgex/cmd/security-secretstore-setup/res-file-token-provider/configuration.yaml  /res-file-token-provider/configuration.yaml
+COPY --from=builder /edgex/cmd/security-secretstore-setup/res/configuration.yaml /res/configuration.yaml
 
-COPY --from=builder /edgex-go/cmd/security-file-token-provider/security-file-token-provider .
-COPY --from=builder /edgex-go/cmd/security-secretstore-setup/security-secretstore-setup .
+COPY --from=builder /edgex/cmd/security-file-token-provider/security-file-token-provider .
+COPY --from=builder /edgex/cmd/security-secretstore-setup/security-secretstore-setup .
 
 # Setup the entry point script
-COPY --from=builder /edgex-go/cmd/security-secretstore-setup/entrypoint.sh /usr/local/bin/
+COPY --from=builder /edgex/cmd/security-secretstore-setup/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh \
     && ln -s /usr/local/bin/entrypoint.sh /
 

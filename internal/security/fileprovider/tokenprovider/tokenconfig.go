@@ -50,9 +50,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokenmaintenance"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokenmaintenance"
 
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
 )
 
 const (

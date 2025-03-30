@@ -20,14 +20,14 @@ import (
 	"context"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/command/container"
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/secret"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	clients "github.com/edgexfoundry/go-mod-core-contracts/v4/clients/http"
+	"github.com/agile-edge/edgex-go/internal/core/command/container"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	clients "github.com/agile-edge/go-mod-core-contracts/v4/clients/http"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/zerotrust"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/zerotrust"
 	"github.com/labstack/echo/v4"
 )
 

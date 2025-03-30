@@ -19,8 +19,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/mosquitto"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/flags"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/mosquitto"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/flags"
 )
 
 const (

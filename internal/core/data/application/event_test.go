@@ -15,15 +15,15 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/edgex-go/internal/core/data/config"
-	"github.com/edgexfoundry/edgex-go/internal/core/data/container"
-	dbMock "github.com/edgexfoundry/edgex-go/internal/core/data/infrastructure/interfaces/mocks"
-	"github.com/edgexfoundry/edgex-go/internal/core/data/mocks"
-	pkgCommon "github.com/edgexfoundry/edgex-go/internal/pkg/common"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	"github.com/agile-edge/edgex-go/internal/core/data/config"
+	"github.com/agile-edge/edgex-go/internal/core/data/container"
+	dbMock "github.com/agile-edge/edgex-go/internal/core/data/infrastructure/interfaces/mocks"
+	"github.com/agile-edge/edgex-go/internal/core/data/mocks"
+	pkgCommon "github.com/agile-edge/edgex-go/internal/pkg/common"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 )
 
 const (

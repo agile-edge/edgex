@@ -6,9 +6,9 @@
 package controller
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/io"
+	"github.com/agile-edge/edgex-go/internal/io"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 type AuthController struct {

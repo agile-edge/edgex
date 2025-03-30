@@ -16,7 +16,7 @@
 package config
 
 import (
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v4/config"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v4/config"
 )
 
 type ConfigurationStruct struct {

@@ -7,14 +7,14 @@
 package metadata
 
 import (
-	"github.com/edgexfoundry/edgex-go"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/controller"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/handlers"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/edgex-go"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/controller"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
 
-	metadataController "github.com/edgexfoundry/edgex-go/internal/core/metadata/controller/http"
+	metadataController "github.com/agile-edge/edgex-go/internal/core/metadata/controller/http"
 
 	"github.com/labstack/echo/v4"
 )

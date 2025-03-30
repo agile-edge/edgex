@@ -11,16 +11,16 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	responseDTO "github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/responses"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	responseDTO "github.com/agile-edge/go-mod-core-contracts/v4/dtos/responses"
 
-	"github.com/edgexfoundry/edgex-go/internal/io"
-	"github.com/edgexfoundry/edgex-go/internal/pkg"
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler/application"
-	schedulerContainer "github.com/edgexfoundry/edgex-go/internal/support/scheduler/container"
+	"github.com/agile-edge/edgex-go/internal/io"
+	"github.com/agile-edge/edgex-go/internal/pkg"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler/application"
+	schedulerContainer "github.com/agile-edge/edgex-go/internal/support/scheduler/container"
 )
 
 type ScheduleActionRecordController struct {

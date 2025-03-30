@@ -16,11 +16,11 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/spf13/cast"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos/requests"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 
-	pgClient "github.com/edgexfoundry/edgex-go/internal/pkg/db/postgres"
+	pgClient "github.com/agile-edge/edgex-go/internal/pkg/db/postgres"
 )
 
 // AddNotification adds a new notification to the database

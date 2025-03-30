@@ -15,10 +15,10 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	pkgCommon "github.com/edgexfoundry/edgex-go/internal/pkg/common"
-	pgClient "github.com/edgexfoundry/edgex-go/internal/pkg/db/postgres"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	model "github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	pkgCommon "github.com/agile-edge/edgex-go/internal/pkg/common"
+	pgClient "github.com/agile-edge/edgex-go/internal/pkg/db/postgres"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	model "github.com/agile-edge/go-mod-core-contracts/v4/models"
 )
 
 // AddProvisionWatcher adds a new provision watcher

@@ -23,12 +23,15 @@ FROM ${BUILDER_BASE} AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk add --update --no-cache make git
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make -e ADD_BUILD_TAGS=$ADD_BUILD_TAGS cmd/core-metadata/core-metadata
@@ -48,11 +51,11 @@ ENV APP_PORT=59881
 EXPOSE $APP_PORT
 
 WORKDIR /
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/core-metadata/core-metadata /
-COPY --from=builder /edgex-go/cmd/core-metadata/res/configuration.yaml /res/configuration.yaml
-COPY --from=builder /edgex-go/cmd/core-metadata/res/uom.yaml /res/uom.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/core-metadata/core-metadata /
+COPY --from=builder /edgex/cmd/core-metadata/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/cmd/core-metadata/res/uom.yaml /res/uom.yaml
 
 ENTRYPOINT ["/core-metadata"]
-CMD ["-cp=keeper.http://edgex-core-keeper:59890", "--registry"]
+CMD ["-cp=keeper.http://core-keeper:59890", "--registry"]

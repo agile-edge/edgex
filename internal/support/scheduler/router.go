@@ -8,13 +8,13 @@ package scheduler
 import (
 	"github.com/labstack/echo/v4"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/controller"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/handlers"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/controller"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
 
-	"github.com/edgexfoundry/edgex-go"
-	schedulerController "github.com/edgexfoundry/edgex-go/internal/support/scheduler/controller/http"
+	"github.com/agile-edge/edgex-go"
+	schedulerController "github.com/agile-edge/edgex-go/internal/support/scheduler/controller/http"
 )
 
 func LoadRestRoutes(r *echo.Echo, dic *di.Container, serviceName string) {

@@ -63,7 +63,7 @@ ifeq ($(ENABLE_FULL_RELRO), true)
 	ENABLE_FULL_RELRO_GOFLAGS = -bindnow
 endif
 
-GOFLAGS=-ldflags "-s -w -X github.com/edgexfoundry/edgex-go.Version=$(VERSION) $(ENABLE_FULL_RELRO_GOFLAGS)" -trimpath -mod=readonly
+GOFLAGS=-ldflags "-s -w -X github.com/agile-edge/edgex.Version=$(VERSION) $(ENABLE_FULL_RELRO_GOFLAGS)" -trimpath -mod=readonly
 GOTESTFLAGS?=-race
 
 ifeq ($(ENABLE_PIE), true)
@@ -89,7 +89,7 @@ endif
 NO_MESSAGEBUS_GO_BUILD_TAG:=no_messagebus
 
 # Base docker image to speed up local builds
-BASE_DOCKERFILE=https://raw.githubusercontent.com/edgexfoundry/ci-build-images/golang-${GO_VERSION}/Dockerfile
+BASE_DOCKERFILE=https://raw.githubusercontent.com/agile-edge/ci-build-images/golang-${GO_VERSION}/Dockerfile
 LOCAL_CACHE_IMAGE_BASE=edgex-go-local-cache-base
 LOCAL_CACHE_IMAGE=edgex-go-local-cache
 
@@ -220,8 +220,8 @@ docker_core_metadata: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-metadata/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/core-metadata:$(GIT_SHA) \
-		-t edgexfoundry/core-metadata:$(DOCKER_TAG) \
+		-t agile-edge/core-metadata:$(GIT_SHA) \
+		-t agile-edge/core-metadata:$(DOCKER_TAG) \
 		.
 
 ddata: docker_core_data
@@ -233,8 +233,8 @@ docker_core_data: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-data/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/core-data:$(GIT_SHA) \
-		-t edgexfoundry/core-data:$(DOCKER_TAG) \
+		-t agile-edge/core-data:$(GIT_SHA) \
+		-t agile-edge/core-data:$(DOCKER_TAG) \
 		.
 
 dcommand: docker_core_command
@@ -246,8 +246,8 @@ docker_core_command: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-command/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/core-command:$(GIT_SHA) \
-		-t edgexfoundry/core-command:$(DOCKER_TAG) \
+		-t agile-edge/core-command:$(GIT_SHA) \
+		-t agile-edge/core-command:$(DOCKER_TAG) \
 		.
 
 dcommon-config: docker_core_common_config
@@ -259,8 +259,8 @@ docker_core_common_config: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-common-config-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/core-common-config-bootstrapper:$(GIT_SHA) \
-		-t edgexfoundry/core-common-config-bootstrapper:$(DOCKER_TAG) \
+		-t agile-edge/core-common-config-bootstrapper:$(GIT_SHA) \
+		-t agile-edge/core-common-config-bootstrapper:$(DOCKER_TAG) \
 		.
 
 dkeeper: docker_core_keeper
@@ -272,8 +272,8 @@ docker_core_keeper: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/core-keeper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/core-keeper:$(GIT_SHA) \
-		-t edgexfoundry/core-keeper:$(DOCKER_TAG) \
+		-t agile-edge/core-keeper:$(GIT_SHA) \
+		-t agile-edge/core-keeper:$(DOCKER_TAG) \
 		.
 
 dsupport: dnotifications dscheduler dscheduler
@@ -287,8 +287,8 @@ docker_support_notifications: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/support-notifications/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/support-notifications:$(GIT_SHA) \
-		-t edgexfoundry/support-notifications:$(DOCKER_TAG) \
+		-t agile-edge/support-notifications:$(GIT_SHA) \
+		-t agile-edge/support-notifications:$(DOCKER_TAG) \
 		.
 
 dscheduler: docker_support_scheduler
@@ -300,8 +300,8 @@ docker_support_scheduler: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/support-scheduler/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/support-scheduler:$(GIT_SHA) \
-		-t edgexfoundry/support-scheduler:$(DOCKER_TAG) \
+		-t agile-edge/support-scheduler:$(GIT_SHA) \
+		-t agile-edge/support-scheduler:$(DOCKER_TAG) \
 		.
 
 dproxya: docker_security_proxy_auth
@@ -312,8 +312,8 @@ docker_security_proxy_auth: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-proxy-auth/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-proxy-auth:$(GIT_SHA) \
-		-t edgexfoundry/security-proxy-auth:$(DOCKER_TAG) \
+		-t agile-edge/security-proxy-auth:$(GIT_SHA) \
+		-t agile-edge/security-proxy-auth:$(DOCKER_TAG) \
 		.
 
 dproxys: docker_security_proxy_setup
@@ -324,8 +324,8 @@ docker_security_proxy_setup: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-proxy-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-proxy-setup:$(GIT_SHA) \
-		-t edgexfoundry/security-proxy-setup:$(DOCKER_TAG) \
+		-t agile-edge/security-proxy-setup:$(GIT_SHA) \
+		-t agile-edge/security-proxy-setup:$(DOCKER_TAG) \
 		.
 dsecretstore: docker_security_secretstore_setup
 docker_security_secretstore_setup: docker_base
@@ -335,8 +335,8 @@ docker_security_secretstore_setup: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-secretstore-setup/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-secretstore-setup:$(GIT_SHA) \
-		-t edgexfoundry/security-secretstore-setup:$(DOCKER_TAG) \
+		-t agile-edge/security-secretstore-setup:$(GIT_SHA) \
+		-t agile-edge/security-secretstore-setup:$(DOCKER_TAG) \
 		.
 
 dbootstrapper: docker_security_bootstrapper
@@ -347,8 +347,8 @@ docker_security_bootstrapper: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-bootstrapper/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-bootstrapper:$(GIT_SHA) \
-		-t edgexfoundry/security-bootstrapper:$(DOCKER_TAG) \
+		-t agile-edge/security-bootstrapper:$(GIT_SHA) \
+		-t agile-edge/security-bootstrapper:$(DOCKER_TAG) \
 		.
 
 dspires: docker_security_spire_server
@@ -359,8 +359,8 @@ docker_security_spire_server: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-server/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-spire-server:$(GIT_SHA) \
-		-t edgexfoundry/security-spire-server:$(DOCKER_TAG) \
+		-t agile-edge/security-spire-server:$(GIT_SHA) \
+		-t agile-edge/security-spire-server:$(DOCKER_TAG) \
 		.
 
 dspirea: docker_security_spire_agent
@@ -371,8 +371,8 @@ docker_security_spire_agent: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-agent/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-spire-agent:$(GIT_SHA) \
-		-t edgexfoundry/security-spire-agent:$(DOCKER_TAG) \
+		-t agile-edge/security-spire-agent:$(GIT_SHA) \
+		-t agile-edge/security-spire-agent:$(DOCKER_TAG) \
 		.
 
 dspirec: docker_security_spire_config
@@ -383,8 +383,8 @@ docker_security_spire_config: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spire-config/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-spire-config:$(GIT_SHA) \
-		-t edgexfoundry/security-spire-config:$(DOCKER_TAG) \
+		-t agile-edge/security-spire-config:$(GIT_SHA) \
+		-t agile-edge/security-spire-config:$(DOCKER_TAG) \
 		.
 
 dspiffetp: docker_security_spiffe_token_provider
@@ -395,8 +395,8 @@ docker_security_spiffe_token_provider: docker_base
 		--build-arg BUILDER_BASE=$(LOCAL_CACHE_IMAGE) \
 		-f cmd/security-spiffe-token-provider/Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/security-spiffe-token-provider:$(GIT_SHA) \
-		-t edgexfoundry/security-spiffe-token-provider:$(DOCKER_TAG) \
+		-t agile-edge/security-spiffe-token-provider:$(GIT_SHA) \
+		-t agile-edge/security-spiffe-token-provider:$(DOCKER_TAG) \
 		.
 
 vendor:

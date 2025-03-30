@@ -9,18 +9,18 @@ import (
 	"errors"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/container"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokencreatable"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokenfilewriter"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokenmaintenance"
+	"github.com/agile-edge/edgex-go/internal"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/container"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokencreatable"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokenfilewriter"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokenmaintenance"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/types"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/types"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets"
 )
 
 // InitAdminTokens reads the resp-init.json file and recreate root tokens and admin token for controller API usage

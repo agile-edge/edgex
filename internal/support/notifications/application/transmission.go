@@ -6,12 +6,12 @@
 package application
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/container"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/dtos"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
 	"github.com/google/uuid"
 )

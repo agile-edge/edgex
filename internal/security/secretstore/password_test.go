@@ -24,11 +24,11 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokenmaintenance"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokenmaintenance"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

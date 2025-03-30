@@ -19,11 +19,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/config"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/config"
 )
 
 func TestConfigureSecureMessageBus(t *testing.T) {

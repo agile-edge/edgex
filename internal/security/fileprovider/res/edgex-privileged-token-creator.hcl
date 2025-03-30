@@ -16,7 +16,7 @@
 
 //
 // This file is taken from
-// https://raw.githubusercontent.com/edgexfoundry/edgex-docs/master/security/token-file-provider.1.rst
+// https://raw.githubusercontent.com/agile-edge/edgex-docs/master/security/token-file-provider.1.rst
 //
 // This is a reference copy of the policy that security-file-token-provider requires
 // in order to run and create policies for other services.

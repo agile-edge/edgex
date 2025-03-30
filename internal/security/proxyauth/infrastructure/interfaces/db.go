@@ -5,7 +5,7 @@
 
 package interfaces
 
-import "github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
+import "github.com/agile-edge/go-mod-core-contracts/v4/errors"
 
 type DBClient interface {
 	AddKey(name string, content string) errors.EdgeX

@@ -6,9 +6,9 @@
 package container
 
 import (
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils/crypto/interfaces"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils/crypto/interfaces"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 // CryptoInterfaceName contains the name of the interfaces.Crypto implementation in the DIC.

@@ -18,7 +18,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/edgexfoundry/edgex-go/internal/support/scheduler"
+	"github.com/agile-edge/edgex-go/internal/support/scheduler"
 
 	"github.com/labstack/echo/v4"
 )

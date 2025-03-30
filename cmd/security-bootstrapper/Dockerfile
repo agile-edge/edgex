@@ -20,12 +20,15 @@
 ARG BUILDER_BASE=golang:1.23-alpine3.20
 FROM ${BUILDER_BASE} AS builder
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk add --update --no-cache make git
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/security-bootstrapper/security-bootstrapper
@@ -50,25 +53,25 @@ RUN mkdir -p ${BOOTSTRAP_REDIS_DIR} ${BOOTSTRAP_MOSQUITTO_DIR}
 WORKDIR ${SECURITY_INIT_STAGING}
 
 # copy all entrypoint scripts into shared folder
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/entrypoint-scripts/ ${SECURITY_INIT_STAGING}/
+COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint-scripts/ ${SECURITY_INIT_STAGING}/
 RUN chmod +x ${SECURITY_INIT_STAGING}/*.sh
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/security-bootstrapper .
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res/configuration.yaml ./res/
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/security-bootstrapper/security-bootstrapper .
+COPY --from=builder /edgex/cmd/security-bootstrapper/res/configuration.yaml ./res/
 
 # needed for bootstrapping Redis db
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res-bootstrap-redis/configuration.yaml ${BOOTSTRAP_REDIS_DIR}/res/
+COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-redis/configuration.yaml ${BOOTSTRAP_REDIS_DIR}/res/
 
 # needed for bootstrapping Postgres db
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res-bootstrap-postgres/configuration.yaml ${BOOTSTRAP_POSTGRES_DIR}/res/
+COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-postgres/configuration.yaml ${BOOTSTRAP_POSTGRES_DIR}/res/
 
 # needed for bootstrapping mosquitto
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/res-bootstrap-mosquitto/configuration.yaml ${BOOTSTRAP_MOSQUITTO_DIR}/res/
+COPY --from=builder /edgex/cmd/security-bootstrapper/res-bootstrap-mosquitto/configuration.yaml ${BOOTSTRAP_MOSQUITTO_DIR}/res/
 
 # setup entry point script
-COPY --from=builder /edgex-go/cmd/security-bootstrapper/entrypoint.sh /
+COPY --from=builder /edgex/cmd/security-bootstrapper/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

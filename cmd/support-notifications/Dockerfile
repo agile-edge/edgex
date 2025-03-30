@@ -22,12 +22,15 @@ FROM ${BUILDER_BASE} AS builder
 
 ARG ADD_BUILD_TAGS=""
 
-WORKDIR /edgex-go
+WORKDIR /edgex
 
 RUN apk add --update --no-cache make bash git ca-certificates zeromq-dev
 
-COPY go.mod vendor* ./
-RUN [ ! -d "vendor" ] && go mod download all || echo "skipping..."
+ARG GO_PROXY="https://goproxy.cn,direct"
+ENV GOPROXY=$GO_PROXY
+
+COPY go.* ./
+RUN go mod download
 
 COPY . .
 RUN make cmd/support-notifications/support-notifications
@@ -45,10 +48,10 @@ ENV APP_PORT=59860
 #expose support notifications port
 EXPOSE $APP_PORT
 
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
-COPY --from=builder /edgex-go/cmd/support-notifications/support-notifications /
-COPY --from=builder /edgex-go/cmd/support-notifications/res/configuration.yaml /res/configuration.yaml
+COPY --from=builder /edgex/Attribution.txt /
+COPY --from=builder /edgex/security.txt /
+COPY --from=builder /edgex/cmd/support-notifications/support-notifications /
+COPY --from=builder /edgex/cmd/support-notifications/res/configuration.yaml /res/configuration.yaml
 
 ENTRYPOINT ["/support-notifications"]
-CMD ["-cp=keeper.http://edgex-core-keeper:59890", "--registry"]
+CMD ["-cp=keeper.http://core-keeper:59890", "--registry"]

@@ -15,18 +15,18 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	zmq "github.com/pebbe/zmq4"
 
-	"github.com/edgexfoundry/edgex-go/internal/pkg/utils"
-	notificationContainer "github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edge/edgex-go/internal/pkg/utils"
+	notificationContainer "github.com/agile-edge/edgex-go/internal/support/notifications/container"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	bootstrapInterfaces "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/secret"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	bootstrapInterfaces "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/interfaces"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/errors"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/models"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/interfaces"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-core-contracts/v4/errors"
+	"github.com/agile-edge/go-mod-core-contracts/v4/models"
 )
 
 // Sender abstracts the notification sending via specified channel

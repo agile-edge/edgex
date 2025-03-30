@@ -25,11 +25,11 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/secretstore/tokencreatable"
+	"github.com/agile-edge/edgex-go/internal/security/secretstore/tokencreatable"
 
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/clients/logger"
-	"github.com/edgexfoundry/go-mod-secrets/v4/pkg/token/fileioperformer"
-	"github.com/edgexfoundry/go-mod-secrets/v4/secrets"
+	"github.com/agile-edge/go-mod-core-contracts/v4/clients/logger"
+	"github.com/agile-edge/go-mod-secrets/v4/pkg/token/fileioperformer"
+	"github.com/agile-edge/go-mod-secrets/v4/secrets"
 )
 
 // TokenFileWriter is a mechanism to generates a token and writes it into a file specified by configuration
@@ -111,7 +111,7 @@ func (w TokenFileWriter) CreateAndWrite(rootToken string, tokenFilePath string,
 func getFunctionName(f interface{}) string {
 	createTokenFuncName := runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name()
 	// On runtime, this will get us something like:
-	// github.com/edgexfoundry/edgex-go/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
+	// github.com/agile-edge/edgex-go/internal/security/secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	// but we only want to get the last part of string after last "/",
 	// i.e. secretstore.(TokenFileWriter).CreateMgmtTokenForConsulSecretsEngine-fm
 	elementName := strings.Split(createTokenFuncName, "/")

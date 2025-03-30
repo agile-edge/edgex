@@ -25,21 +25,21 @@ package notifications
 import (
 	"context"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/config"
+	"github.com/agile-edge/go-mod-bootstrap/v4/config"
 
-	"github.com/edgexfoundry/edgex-go"
-	pkgHandlers "github.com/edgexfoundry/edgex-go/internal/pkg/bootstrap/handlers"
-	notificationsConfig "github.com/edgexfoundry/edgex-go/internal/support/notifications/config"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/container"
-	"github.com/edgexfoundry/edgex-go/internal/support/notifications/embed"
+	"github.com/agile-edge/edgex-go"
+	pkgHandlers "github.com/agile-edge/edgex-go/internal/pkg/bootstrap/handlers"
+	notificationsConfig "github.com/agile-edge/edgex-go/internal/support/notifications/config"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/container"
+	"github.com/agile-edge/edgex-go/internal/support/notifications/embed"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/flags"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/handlers"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
-	"github.com/edgexfoundry/go-mod-core-contracts/v4/common"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/flags"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/handlers"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
+	"github.com/agile-edge/go-mod-core-contracts/v4/common"
 
 	"github.com/labstack/echo/v4"
 )

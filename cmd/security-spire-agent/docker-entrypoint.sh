@@ -26,7 +26,7 @@ umask 027
 : ${SPIFFE_SERVER_SOCKET:=/tmp/edgex/secrets/spiffe/private/api.sock}
 : ${SPIFFE_ENDPOINTSOCKET:=/tmp/edgex/secrets/spiffe/public/api.sock}
 : ${SPIFFE_TRUSTBUNDLE_PATH:=/tmp/edgex/secrets/spiffe/trust/bundle}
-: ${SPIFFE_TRUSTDOMAIN:=edgexfoundry.org}
+: ${SPIFFE_TRUSTDOMAIN:=agile-edge.org}
 : ${SPIFFE_SERVER_HOST:=edgex-security-spire-server}
 : ${SPIFFE_SERVER_PORT:=59840}
 : ${SPIFFE_AGENT0_CN:=agent0}

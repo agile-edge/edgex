@@ -67,7 +67,7 @@ components:
           description: "The total count of all multi instances."
           type: integer
     ConfigResponse:
-      description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.edgexfoundry.org)."
+      description: "An object containing the service's configuration. Please refer the configuration documentation of each service for more details at [EdgeX Foundry Documentation](https://docs.agile-edge.org)."
       type: object
       properties:
         apiVersion:

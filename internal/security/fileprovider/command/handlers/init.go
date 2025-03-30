@@ -20,13 +20,13 @@ import (
 	"flag"
 	"sync"
 
-	"github.com/edgexfoundry/edgex-go/internal/security/bootstrapper/interfaces"
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/command/createtoken"
-	"github.com/edgexfoundry/edgex-go/internal/security/fileprovider/container"
+	"github.com/agile-edge/edgex-go/internal/security/bootstrapper/interfaces"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/command/createtoken"
+	"github.com/agile-edge/edgex-go/internal/security/fileprovider/container"
 
-	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/container"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/bootstrap/startup"
-	"github.com/edgexfoundry/go-mod-bootstrap/v4/di"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v4/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v4/di"
 )
 
 // Bootstrap is to implement BootstrapHandler
